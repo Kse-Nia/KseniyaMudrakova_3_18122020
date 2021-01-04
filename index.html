@@ -6,66 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./stylesheet.css">
+    <script src="https://kit.fontawesome.com/406da18a0b.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>OhMyFood</title>
 </head>
 
 <body>
-    <!-- header -->
+    <!-- Header -->
     <header>
-        <img class="logo" rel="">
-        <div class="localisation">
-            <form></form>
-        </div>
-        <h2>Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <div class="button">
-            <p>Explorer nos restaurants</p>
-        </div>
+        <h1>Ohmyfood</h1>
     </header>
 
-    <!-- main -->
+    <!-- Main -->
     <main>
-        <h3>Fonctionnement</h3>
-        <div class="selection">
-            <ul>
-                <li><a href="#">Choisissez un restaurant</a></li>
-                <li><a href="#">Composez votre menu</a></li>
-                <li><a href="#">Dégustez au restaurant</a></li>
-            </ul>
-        </div>
-
-        <div class="restaurants">
-            <h2>Restaurants</h2>
-            <div class="liste">
-                <div class="case">
-                    <p>La palette du goût</p>
-                    <p>Ménilmontant</p>
-                </div>
-                <div class="case">
-                    <p>La note enchantée</p>
-                    <p>Charonne</p>
-                </div>
-                <div class="case">
-                    <p>A la française</p>
-                    <p>Cité Rouge</p>
-                </div>
-                <div class="case">
-                    <p>Le délice des sens</p>
-                    <p>Folie-Méricourt</p>
-                </div>
+        <section class="localisation">
+            <i class="fas fa-map-marker-alt local__icon"></i>
+            <span class="localtext">Paris, Belleville</span>
+        </section>
+        <section class="reservation">
+            <div class="reservation_text">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, sélectionés par nos soins </p>
             </div>
-
-        </div>
-
+            <div class="bouton"></div>
+        </section>
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <div class="case1">
+                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                <p>La palette du goût</p>
+                <p>Ménilmontant</p>
+            </div>
+            <div class="case1">
+                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                <p>La palette du goût</p>
+                <p>Ménilmontant</p>
+            </div>
+            <div class="case1">
+                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                <p>La palette du goût</p>
+                <p>Ménilmontant</p>
+            </div>
+            <div class="case1">
+                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                <p>La palette du goût</p>
+                <p>Ménilmontant</p>
+            </div>
+        </section>
     </main>
 
     <!-- footer -->
-    <footer>
-        <div>ohmyfood</div>
-        <ul>
-            <li><a>Proposer un restaurant</a></li>
-            <li><a>Devenir partenaire</a></li>
+    <footer class="footer">
+        <p>ohmyfood</p>
+        </div>
+        <ul class="footer_list">
+            <li><i class="fas fa-utensils"></i><a>Proposer un restaurant</a></li>
+            <li><i class="fas fa-hands-helping"></i><a>Devenir partenaire</a></li>
             <li><a>Mentions légales</a></li>
             <li><a>Contact</a></li>
         </ul>

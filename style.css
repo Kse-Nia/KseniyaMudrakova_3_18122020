@@ -1,0 +1,97 @@
+/* ---------- Couleurs principales ---------- */
+/* ---------- Les mixin ---------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+
+img {
+  width: 100%;
+}
+
+/* ---------- Header ---------- */
+header {
+  height: 65px;
+}
+
+header h1 {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+}
+
+/* ---------- Main ---------- */
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.localisation {
+  height: 50px;
+  background-color: #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.localisation .local__icon {
+  margin: 0 5% 0;
+}
+
+.reservation {
+  width: 100%;
+  height: 290px;
+}
+
+.reservation_text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  width: 100%;
+  min-height: 200px;
+  padding-left: 5%;
+  background-color: #353535;
+  color: white;
+  bottom: 0;
+}
+
+.footer p {
+  font-family: "Shrikhand", cursive;
+  padding: 5% 0 5%;
+}
+/*# sourceMappingURL=style.css.map */
