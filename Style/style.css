@@ -1,5 +1,3 @@
-/* ---------- Couleurs principales ---------- */
-/* ---------- Les mixin ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +12,12 @@ header {
   height: auto;
 }
 
+h2,
+h3,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
 img {
   width: 100%;
 }
@@ -26,6 +30,12 @@ header {
 header h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* ---------- Main ---------- */
@@ -76,8 +86,29 @@ body {
           justify-content: center;
 }
 
-.restaurants {
+.container {
+  width: 100%;
+  height: auto;
   background-color: #f6f6f6;
+}
+
+.container__bloc__img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.container__bloc__img .btn {
+  width: 80px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background-color: green;
+}
+
+h2 {
+  padding: 5% 0 5% 5%;
 }
 
 /* ---------- Footer ---------- */

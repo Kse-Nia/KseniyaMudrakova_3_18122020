@@ -1,25 +1,5 @@
-/* ---------- Couleurs principales ---------- */
-
-$violet: #9356dc;
-$rose: #ff79da;
-$vert: #99e2d0;
-$darkgrey: #353535;
-$lightgrey: #f6f6f6;
-
-/* ---------- Les mixin ---------- */
-
-@mixin flexcol {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@mixin flexrow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+@import "variables";
+@import "mixin";
 
 * {
   margin: 0;
@@ -34,6 +14,11 @@ header {
   height: auto;
 }
 
+h2,
+h3,
+p {
+  font-family: "Roboto", sans-serif;
+}
 img {
   width: 100%;
 }
@@ -45,6 +30,8 @@ header {
   h1 {
     font-family: "Shrikhand", cursive;
     text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }
 /* ---------- Main ---------- */
@@ -73,15 +60,39 @@ body {
   @include flexcol();
 }
 
-.restaurants {
-  background-color: $lightgrey;
+.container {
+  width: 100%;
+  height: auto;
+  background-color: $fondclair;
+
+  &__bloc {
+    &__img {
+      width: 100%;
+      height: auto;
+      position: relative;
+      .btn {
+        width: 80px;
+        height: 30px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        background-color: green;
+      }
+    }
+  }
 }
+
+h2 {
+  padding: 5% 0 5% 5%;
+}
+
 /* ---------- Footer ---------- */
+
 .footer {
   width: 100%;
   min-height: 200px;
   padding-left: 5%;
-  background-color: $darkgrey;
+  background-color: $footer;
   color: white;
   bottom: 0;
   p {
