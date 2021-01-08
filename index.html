@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/406da18a0b.js" crossorigin="anonymous" defer></script>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./Style/style.css" />
     <title>OhMyFood</title>
 </head>
 
@@ -25,10 +26,25 @@
         </section>
         <section class="reservation">
             <div class="reservation_text">
-                <h1>Réservez le menu qui vous convient</h1>
+                <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionés par nos soins </p>
             </div>
-            <div class="bouton"></div>
+            <div class="bouton">Explorer nos restaurants</div>
+        </section>
+
+        <!--Partie Fonctionnement-->
+
+        <section class="commande">
+            <h2>Fonctionnement</h2>
+            <div class="container">
+                <button class="container_btn"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</button>
+            </div>
+            <div class="container">
+                <button class="container_btn"> <i class="tuto__icon fas fa-list-ul"></i>Composez votre menu</button>
+            </div>
+            <div class="container">
+                <button class="container_btn"><i class="tuto__icon fas fa-store"></i>Dégustez au restaurant</button>
+            </div>
         </section>
 
         <!--Partie restaurants-->
@@ -37,7 +53,22 @@
             <h2>Restaurants</h2>
             <div class="container__bloc">
                 <div class="container_img">
-                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                    <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                    <button class="btn">Nouveau</button>
+                </div>
+                <div class="container__text">
+                    <p>La palette du goût</p>
+                    <p>Ménilmontant</p>
+                </div>
+                <div class="heart">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+
+
+            <div class="container__bloc">
+                <div class="container_img">
+                    <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
                     <button class="btn">Nouveau</button>
                 </div>
                 <div class="container__text">
@@ -50,20 +81,7 @@
 
             <div class="container__bloc">
                 <div class="container_img">
-                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
-                    <button class="btn">Nouveau</button>
-                </div>
-                <div class="container__text">
-                    <p>La palette du goût</p>
-                    <p>Ménilmontant</p>
-                </div>
-                <div class="heart"><i class="far fa-heart"></i></div>
-            </div>
-
-
-            <div class="container__bloc">
-                <div class="container_img">
-                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                    <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
                     <button class="btn">Nouveau</button>
                 </div>
                 <div class="container__text">
@@ -75,7 +93,7 @@
 
             <div class="container__bloc">
                 <div class="container_img">
-                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
+                    <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
                     <button class="btn">Nouveau</button>
                 </div>
                 <div class="container__text">
@@ -90,7 +108,7 @@
 
     <!-- footer -->
     <footer class="footer">
-        <p>ohmyfood</p>
+        <p class="logo">ohmyfood</p>
         </div>
         <ul class="footer_list">
             <li><i class="fas fa-utensils"></i><a>Proposer un restaurant</a></li>
