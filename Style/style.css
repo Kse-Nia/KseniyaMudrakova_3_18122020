@@ -1,11 +1,17 @@
 body,
 html {
   width: 100%;
+  height: 100vh;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  padding: 5% 0 5% 5%;
+  margin: 0;
 }
 
 /* ---------- Header ---------- */
@@ -55,6 +61,7 @@ header h1 {
 .reservation {
   width: 100%;
   height: 290px;
+  background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,7 +80,7 @@ header h1 {
 }
 
 .bouton {
-  width: 60%;
+  width: 220px;
   height: 3em;
   margin: 5% 0 5%;
   -webkit-box-shadow: 3px 1px 6px 1px #c6c6c6;
@@ -99,12 +106,23 @@ header h1 {
           align-items: center;
 }
 
-h2 {
-  padding: 5% 0 5% 5%;
-}
-
+/* Partie tuto commandes */
 .commande {
   width: 100%;
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.commande .container {
+  width: 100%;
+  height: auto;
+  margin: 0 0 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,16 +135,28 @@ h2 {
           align-items: center;
 }
 
-.commande .container {
-  width: 100%;
-  margin: 5% 0 10%;
+.commande .container .bloc {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.commande .container_btn {
-  width: 90%;
-  height: 5em;
+.commande .container .bloc_btn {
+  width: 100%;
+  min-height: 65px;
   padding-left: 10%;
+  margin: 5% 0 5%;
   background-color: #f6f6f6;
+  font-size: 1em;
+  font-weight: 500;
   border: none;
   border-radius: 20px;
   -webkit-box-shadow: 3px 1px 8px 1px #c6c6c6;
@@ -143,6 +173,122 @@ h2 {
           align-items: center;
 }
 
+.icon {
+  padding-right: 5%;
+}
+
+.icon--g {
+  color: #7e7e7e;
+}
+
+.icon--v {
+  color: #9356dc;
+}
+
+.cercle {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #9356dc;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ---------- Partie restaurants ---------- */
+.restaurants {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box__case {
+  width: 90%;
+  height: auto;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.box_img {
+  position: relative;
+}
+
+.pic {
+  width: 100%;
+  height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.btn {
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  background-color: #99e2d0;
+  border: none;
+  color: #008766;
+}
+
+.text {
+  padding: 2% 0 2% 5%;
+  text-align: left;
+}
+
+.text_contenu {
+  width: 50%;
+  margin: 0;
+}
+
+.far {
+  font-size: 25px;
+  height: auto;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   width: 100%;
@@ -154,12 +300,6 @@ h2 {
   bottom: 0;
 }
 
-.footer p {
-  font-size: 1.2em;
-  padding: 5% 0 0;
-  font-family: "Shrikhand", cursive;
-}
-
 .footer_list {
   padding: 0 0 10%;
   margin: 0;
@@ -169,6 +309,13 @@ h2 {
 .footer_list .fa-utensils,
 .footer_list .fa-hands-helping {
   padding: 0 3% 0 0;
+}
+
+.logo {
+  padding: 5% 0 5%;
+  margin: 0;
+  font-size: 1.2em;
+  font-family: "Shrikhand", cursive;
 }
 
 li {

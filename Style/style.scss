@@ -4,6 +4,7 @@
 body,
 html {
   width: 100%;
+  height: 100vh;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -11,6 +12,10 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+h2 {
+  padding: 5% 0 5% 5%;
+  margin: 0;
+}
 /* ---------- Header ---------- */
 
 header {
@@ -39,6 +44,7 @@ header {
 .reservation {
   width: 100%;
   height: 290px;
+  background-color: $back;
   @include column;
   &_text {
     width: 80%;
@@ -51,44 +57,123 @@ header {
   @include centrer;
 }
 
-h2 {
-  padding: 5% 0 5% 5%;
-}
+/* Partie tuto commandes */
 
 .commande {
   width: 100%;
-  @include column;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
   .container {
-    width: 100%;
-    margin: 5% 0 10%;
-    &_btn {
+    @include auto;
+    margin: 0 0 5%;
+    @include column;
+    .bloc {
       width: 90%;
-      height: 5em;
-      padding-left: 10%;
-      background-color: $back;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 3px 1px 8px 1px #c6c6c6;
-      @include centrerrow;
+      @include centrerow;
+      &_btn {
+        width: 100%;
+        min-height: 65px;
+        padding-left: 10%;
+        margin: 5% 0 5%;
+        background-color: $back;
+        font-size: 1em;
+        font-weight: 500;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 3px 1px 8px 1px #c6c6c6;
+        @include centrerow;
+      }
     }
   }
+}
+
+.icon {
+  padding-right: 5%;
+  &--g {
+    color: $icon;
+  }
+  &--v {
+    color: $primaire;
+  }
+}
+
+.cercle {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: $primaire;
+  color: white;
+  @include centrer;
+}
+
+/* ---------- Partie restaurants ---------- */
+
+.restaurants {
+  @include auto;
+
+  background-color: $back;
+}
+
+.box {
+  @include centrer;
+  &__case {
+    width: 90%;
+    height: auto;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.box_img {
+  position: relative;
+}
+.pic {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.btn {
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  background-color: $tertiaire;
+  border: none;
+  color: #008766;
+}
+
+.text {
+  padding: 2% 0 2% 5%;
+  text-align: left;
+  &_contenu {
+    width: 50%;
+    margin: 0;
+  }
+}
+.far {
+  font-size: 25px;
+  height: auto;
+  float: right;
+  display: flex;
+  align-items: center;
 }
 
 /* ---------- Footer ---------- */
 
 .footer {
-  width: 100%;
-  height: auto;
+  @include auto;
   min-height: 200px;
   padding-left: 5%;
   background-color: $footer;
   color: white;
   bottom: 0;
-  p {
-    font-size: 1.2em;
-    padding: 5% 0 0;
-    font-family: "Shrikhand", cursive;
-  }
   &_list {
     padding: 0 0 10%;
     margin: 0;
@@ -98,6 +183,13 @@ h2 {
       padding: 0 3% 0 0;
     }
   }
+}
+
+.logo {
+  padding: 5% 0 5%;
+  margin: 0;
+  font-size: 1.2em;
+  font-family: "Shrikhand", cursive;
 }
 
 li {
