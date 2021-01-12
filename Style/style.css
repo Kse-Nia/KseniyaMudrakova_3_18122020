@@ -16,12 +16,8 @@ h2 {
 
 /* ---------- Header ---------- */
 header {
-  height: 50px;
-}
-
-header h1 {
-  font-family: "Shrikhand", cursive;
-  text-align: center;
+  width: 100%;
+  height: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +27,12 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Shrikhand", cursive;
 }
 
 /* ---------- Main ---------- */
@@ -119,7 +121,7 @@ header h1 {
           flex-direction: column;
 }
 
-.commande .container {
+.container {
   width: 100%;
   height: auto;
   margin: 0 0 5%;
@@ -135,7 +137,7 @@ header h1 {
           align-items: center;
 }
 
-.commande .container .bloc {
+.container .bloc {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,10 +151,10 @@ header h1 {
           align-items: center;
 }
 
-.commande .container .bloc_btn {
+.container .bloc__btn {
   width: 100%;
   min-height: 65px;
-  padding-left: 10%;
+  padding: 0;
   margin: 5% 0 5%;
   background-color: #f6f6f6;
   font-size: 1em;
@@ -173,6 +175,10 @@ header h1 {
           align-items: center;
 }
 
+.container .bloc__text {
+  width: 100%;
+}
+
 .icon {
   padding-right: 5%;
 }
@@ -188,6 +194,7 @@ header h1 {
 .cercle {
   width: 24px;
   height: 24px;
+  margin-right: -10px;
   border-radius: 12px;
   background-color: #9356dc;
   color: white;
@@ -211,6 +218,7 @@ header h1 {
   width: 100%;
   height: auto;
   background-color: #f6f6f6;
+  padding-bottom: 15%;
 }
 
 .box {
@@ -270,15 +278,25 @@ header h1 {
 .text {
   padding: 2% 0 2% 5%;
   text-align: left;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.text_contenu {
-  width: 50%;
+.text_info {
+  width: 90%;
   margin: 0;
 }
 
-.far {
+.fa-heart {
+  height: auto;
   font-size: 25px;
+  padding-right: 5%;
   height: auto;
   float: right;
   display: -webkit-box;
@@ -287,6 +305,11 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.fa-heart:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
 }
 
 /* ---------- Footer ---------- */
@@ -320,5 +343,104 @@ header h1 {
 
 li {
   list-style: none;
+}
+
+/* ---------- Les 4 autres pages ---------- */
+.image {
+  width: 100%;
+  height: 20%;
+  z-index: 1;
+  position: relative;
+}
+
+.image__plat {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  width: 100%;
+  margin-top: -5%;
+  padding: 0 5% 5%;
+  border-radius: 20px 20px 0 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  z-index: 2;
+}
+
+.menu__titre {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.plat {
+  width: 100%;
+  background-color: white;
+}
+
+.plat__text {
+  width: 100%;
+  padding: 2% 0 2% 2%;
+}
+
+.contain {
+  width: 100%;
+  height: auto;
+}
+
+.contain__type {
+  width: 15%;
+  border-bottom: solid 3px #99e2d0;
+}
+
+.contain__type h3 {
+  margin: 0 0 5%;
+}
+
+.btn2 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn2__commander {
+  width: 220px;
+  height: 3em;
+  margin: 5% 0 5%;
+  -webkit-box-shadow: 3px 1px 6px 1px #c6c6c6;
+          box-shadow: 3px 1px 6px 1px #c6c6c6;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #ff79da), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da 8%, #9356dc 100%);
+  border-radius: 25px;
+  color: #ffffff;
+  font-family: "Roboto";
+  text-decoration: none;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */

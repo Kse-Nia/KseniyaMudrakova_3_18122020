@@ -19,15 +19,18 @@ h2 {
 /* ---------- Header ---------- */
 
 header {
-  height: 50px;
-  h1 {
-    font-family: "Shrikhand", cursive;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Shrikhand", cursive;
+}
+
 /* ---------- Main ---------- */
 
 .localisation {
@@ -64,26 +67,30 @@ header {
   margin-top: 5%;
   display: flex;
   flex-direction: column;
-  .container {
-    @include auto;
-    margin: 0 0 5%;
-    @include column;
-    .bloc {
-      width: 90%;
+}
+
+.container {
+  @include auto;
+  margin: 0 0 5%;
+  @include column;
+  .bloc {
+    width: 90%;
+    @include centrerow;
+    &__btn {
+      width: 100%;
+      min-height: 65px;
+      padding: 0;
+      margin: 5% 0 5%;
+      background-color: $back;
+      font-size: 1em;
+      font-weight: 500;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 3px 1px 8px 1px #c6c6c6;
       @include centrerow;
-      &_btn {
-        width: 100%;
-        min-height: 65px;
-        padding-left: 10%;
-        margin: 5% 0 5%;
-        background-color: $back;
-        font-size: 1em;
-        font-weight: 500;
-        border: none;
-        border-radius: 20px;
-        box-shadow: 3px 1px 8px 1px #c6c6c6;
-        @include centrerow;
-      }
+    }
+    &__text {
+      width: 100%;
     }
   }
 }
@@ -101,6 +108,7 @@ header {
 .cercle {
   width: 24px;
   height: 24px;
+  margin-right: -10px;
   border-radius: 12px;
   background-color: $primaire;
   color: white;
@@ -111,8 +119,8 @@ header {
 
 .restaurants {
   @include auto;
-
   background-color: $back;
+  padding-bottom: 15%;
 }
 
 .box {
@@ -152,17 +160,25 @@ header {
 .text {
   padding: 2% 0 2% 5%;
   text-align: left;
-  &_contenu {
-    width: 50%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  &_info {
+    width: 90%;
     margin: 0;
   }
 }
-.far {
+.fa-heart {
+  height: auto;
   font-size: 25px;
+  padding-right: 5%;
   height: auto;
   float: right;
   display: flex;
   align-items: center;
+  &:hover {
+    background: linear-gradient($primaire, $secondaire);
+  }
 }
 
 /* ---------- Footer ---------- */
@@ -194,4 +210,70 @@ header {
 
 li {
   list-style: none;
+}
+
+/* ---------- Les 4 autres pages ---------- */
+
+.image {
+  width: 100%;
+  height: 20%;
+  z-index: 1;
+  position: relative;
+  &__plat {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  width: 100%;
+  margin-top: -5%;
+  padding: 0 5% 5%;
+  border-radius: 20px 20px 0 0;
+  background-color: $back;
+  position: absolute;
+  z-index: 2;
+  &__titre {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.plat {
+  width: 100%;
+  background-color: white;
+  &__text {
+    width: 100%;
+    padding: 2% 0 2% 2%;
+  }
+}
+
+.contain {
+  width: 100%;
+  height: auto;
+  &__type {
+    width: 15%;
+    border-bottom: solid 3px $tertiaire;
+    h3 {
+      margin: 0 0 5%;
+    }
+  }
+}
+
+.btn2 {
+  width: 100%;
+  height: auto;
+  @include column;
+  &__commander {
+    @include bouton;
+    border: none;
+  }
 }
