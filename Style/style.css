@@ -341,7 +341,7 @@ h1 {
   width: 100%;
   height: auto;
   margin-top: -5%;
-  padding: 0 5% 5%;
+  padding-bottom: 5%;
   border-radius: 20px 20px 0 0;
   background-color: #f6f6f6;
   position: absolute;
@@ -368,11 +368,18 @@ h1 {
 }
 
 .plat {
-  width: 100%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .plat__text {
-  width: 100%;
+  width: 80%;
   padding: 2% 0 2% 2%;
 }
 
