@@ -55,6 +55,13 @@ h1 {
   border-radius: 20px 20px 0 0;
   z-index: 2;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .blocMenu__titre {
@@ -73,32 +80,30 @@ h1 {
   font-family: "Shrikhand", cursive;
 }
 
-.blocMenu__titre__nom {
-  padding: 5% 0 5% 5%;
-  margin: 0;
-}
-
 .type {
   width: 10%;
-  padding-bottom: 2%;
+  padding: 2% 0 2%;
   margin: 0;
   border-bottom: 3px solid #99e2d0;
 }
 
 .type__h3 {
-  width: 100%;
   margin: 0;
 }
 
 .favoris {
   width: 20%;
   height: auto;
+  padding: 0 10%;
   font-size: 1.4em;
   color: #7e7e7e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cases {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,7 +120,7 @@ h1 {
 }
 
 .cases__contenant {
-  width: 90%;
+  width: 100%;
   padding: 0 0 0 5%;
   background-color: white;
   border-radius: 20px;
