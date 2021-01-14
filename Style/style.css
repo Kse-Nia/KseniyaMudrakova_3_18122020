@@ -62,7 +62,7 @@ h1 {
           align-items: center;
 }
 
-.localisation .local__icon {
+.localisation__localicon {
   margin: 0 4% 0;
 }
 
@@ -85,6 +85,33 @@ h1 {
 .reservation_text {
   width: 80%;
   text-align: center;
+}
+
+.reservation__bouton {
+  width: 220px;
+  height: 3em;
+  margin: 5% 0 5%;
+  -webkit-box-shadow: 3px 1px 6px 1px #c6c6c6;
+          box-shadow: 3px 1px 6px 1px #c6c6c6;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #ff79da), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da 8%, #9356dc 100%);
+  border-radius: 25px;
+  color: #ffffff;
+  font-family: "Roboto";
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bouton {
@@ -127,7 +154,7 @@ h1 {
           flex-direction: column;
 }
 
-.container {
+.commande__container {
   width: 100%;
   height: auto;
   margin: 0 0 5%;
@@ -157,6 +184,29 @@ h1 {
           align-items: center;
 }
 
+.bloc__cercle {
+  width: 24px;
+  height: 24px;
+  margin-right: -10px;
+  border-radius: 12px;
+  background-color: #9356dc;
+  color: white;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .bloc__btn {
   width: 100%;
   min-height: 65px;
@@ -177,6 +227,9 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -200,35 +253,7 @@ h1 {
   color: #9356dc;
 }
 
-.cercle {
-  width: 24px;
-  height: 24px;
-  margin-right: -10px;
-  border-radius: 12px;
-  background-color: #9356dc;
-  color: white;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 /* ---------- Partie restaurants ---------- */
-.mainMenu {
-  width: 100%;
-  height: auto;
-}
-
 .restaurants {
   width: 100%;
   height: auto;
@@ -237,6 +262,8 @@ h1 {
 }
 
 .box {
+  width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,6 +292,9 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .box_img {

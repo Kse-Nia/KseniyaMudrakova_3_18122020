@@ -45,7 +45,7 @@ h1 {
   font-size: 1em;
   font-weight: 500;
   @include centrer;
-  .local__icon {
+  &__localicon {
     margin: 0 4% 0;
   }
 }
@@ -58,6 +58,10 @@ h1 {
   &_text {
     width: 80%;
     text-align: center;
+  }
+  &__bouton {
+    @include bouton;
+    @include centrer;
   }
 }
 
@@ -73,17 +77,26 @@ h1 {
   margin-top: 5%;
   display: flex;
   flex-direction: column;
-}
-
-.container {
-  @include auto;
-  margin: 0 0 5%;
-  @include column;
+  &__container {
+    @include auto;
+    margin: 0 0 5%;
+    @include column;
+  }
 }
 
 .bloc {
   width: 90%;
   @include centrerow;
+  &__cercle {
+    width: 24px;
+    height: 24px;
+    margin-right: -10px;
+    border-radius: 12px;
+    background-color: $primaire;
+    color: white;
+    z-index: 2;
+    @include centrer;
+  }
   &__btn {
     width: 100%;
     min-height: 65px;
@@ -98,6 +111,7 @@ h1 {
     z-index: 1;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
   &__text {
@@ -117,22 +131,8 @@ h1 {
   }
 }
 
-.cercle {
-  width: 24px;
-  height: 24px;
-  margin-right: -10px;
-  border-radius: 12px;
-  background-color: $primaire;
-  color: white;
-  z-index: 2;
-  @include centrer;
-}
-
 /* ---------- Partie restaurants ---------- */
-.mainMenu {
-  width: 100%;
-  height: auto;
-}
+
 .restaurants {
   @include auto;
   background-color: $back;
@@ -140,6 +140,7 @@ h1 {
 }
 
 .box {
+  @include auto;
   @include centrer;
   &__case {
     width: 90%;
@@ -149,6 +150,7 @@ h1 {
     background-color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 }
 
