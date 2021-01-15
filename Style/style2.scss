@@ -12,17 +12,27 @@ body {
 
 /* ---------- Header ---------- */
 
-header {
+.header {
   width: 100%;
   height: 65px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-h1 {
-  margin: 0;
-  padding: 0;
-  font-family: "Shrikhand", cursive;
+  &__ancre {
+    text-decoration: none;
+    color: black;
+  }
+  &__logo {
+    width: 70%;
+    margin: 0 5% 0;
+    padding: 0;
+    font-family: "Shrikhand", cursive;
+    text-align: center;
+  }
+  &__retour {
+    font-size: 1.2em;
+  }
 }
 
 /* ---------- Partie carte des restaurants ---------- */
@@ -53,6 +63,9 @@ h1 {
   position: relative;
   display: flex;
   flex-direction: column;
+  &__nom {
+    width: 80%;
+  }
   &__titre {
     width: 100%;
     height: auto;
@@ -76,7 +89,6 @@ h1 {
 .favoris {
   width: 20%;
   height: auto;
-  padding: 0 10%;
   font-size: 1.4em;
   color: $icon;
   display: flex;
@@ -95,6 +107,7 @@ h1 {
     padding: 0 0 0 5%;
     background-color: white;
     border-radius: 20px;
+    @include shadow;
     display: flex;
     flex-direction: row;
   }

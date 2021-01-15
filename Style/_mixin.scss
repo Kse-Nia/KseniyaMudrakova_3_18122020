@@ -36,3 +36,7 @@
 @mixin bloc {
   background-color: #f6f6f6;
 }
+
+@mixin shadow {
+  box-shadow: 0px 4px 10px 3px rgba(123, 125, 121, 0.64);
+}
