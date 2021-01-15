@@ -65,7 +65,7 @@ body {
 
 .blocMenu {
   height: 80%;
-  padding: 2% 0 5% 5%;
+  padding: 2% 5% 5%;
   margin-top: -5%;
   background-color: #f6f6f6;
   border-radius: 20px 20px 0 0;
@@ -140,7 +140,7 @@ body {
 
 .cases__contenant {
   width: 100%;
-  padding: 0 0 0 5%;
+  padding: 0;
   background-color: white;
   border-radius: 20px;
   -webkit-box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.25);
@@ -154,7 +154,11 @@ body {
           flex-direction: row;
 }
 
-.prix {
+.cases__contenant__description {
+  width: 70%;
+}
+
+.cases__prix {
   width: 20%;
   margin: 0 5% 0;
   display: -webkit-box;

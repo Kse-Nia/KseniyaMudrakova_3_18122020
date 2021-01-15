@@ -56,7 +56,7 @@ body {
 
 .blocMenu {
   height: 80%;
-  padding: 2% 0 5% 5%;
+  padding: 2% 5% 5%;
   margin-top: -5%;
   background-color: $back;
   border-radius: 20px 20px 0 0;
@@ -105,21 +105,23 @@ body {
   font-family: "Roboto", sans-serif;
   &__contenant {
     width: 100%;
-    padding: 0 0 0 5%;
+    padding: 0;
     background-color: white;
     border-radius: 20px;
     @include shadow;
     display: flex;
     flex-direction: row;
+    &__description {
+      width: 70%;
+    }
   }
-}
-
-.prix {
-  width: 20%;
-  margin: 0 5% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &__prix {
+    width: 20%;
+    margin: 0 5% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* ---------- Footer ---------- */
