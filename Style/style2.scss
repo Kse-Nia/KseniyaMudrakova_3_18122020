@@ -96,24 +96,27 @@ body {
 }
 
 .cases {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: flex;
   margin: 5% 0 5%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Roboto", sans-serif;
   &__contenant {
     width: 100%;
     padding: 0;
+    margin: 5% 0 5%;
     background-color: white;
     border-radius: 20px;
     @include shadow;
     display: flex;
     flex-direction: row;
-    &__description {
-      width: 70%;
-    }
+  }
+  &__description {
+    width: 70%;
+    margin-left: 5%;
   }
   &__prix {
     width: 20%;

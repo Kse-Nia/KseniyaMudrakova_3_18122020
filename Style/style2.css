@@ -122,7 +122,7 @@ body {
 }
 
 .cases {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,15 +132,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Roboto", sans-serif;
 }
 
 .cases__contenant {
   width: 100%;
   padding: 0;
+  margin: 5% 0 5%;
   background-color: white;
   border-radius: 20px;
   -webkit-box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.25);
@@ -154,8 +158,9 @@ body {
           flex-direction: row;
 }
 
-.cases__contenant__description {
+.cases__description {
   width: 70%;
+  margin-left: 5%;
 }
 
 .cases__prix {
