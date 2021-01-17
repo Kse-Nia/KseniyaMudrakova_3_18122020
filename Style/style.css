@@ -84,7 +84,6 @@ h1 {
 
 .reservation_text {
   width: 80%;
-  text-align: center;
 }
 
 .reservation__bouton {
@@ -227,9 +226,6 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -238,6 +234,7 @@ h1 {
 .bloc__text {
   width: 80%;
   padding-left: 5%;
+  text-align: start;
 }
 
 .icon {
@@ -349,7 +346,6 @@ h1 {
   height: auto;
   font-size: 25px;
   padding-right: 5%;
-  height: auto;
   float: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,9 +355,10 @@ h1 {
           align-items: center;
 }
 
-.fa-heart:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background: linear-gradient(#9356dc, #ff79da);
+.fa-heart:active {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: blue;
 }
 
 /* ---------- Footer ---------- */
