@@ -84,38 +84,12 @@ h1 {
 
 .reservation_text {
   width: 80%;
+  text-align: center;
 }
 
 .reservation__bouton {
   width: 220px;
-  height: 3em;
-  margin: 5% 0 5%;
-  -webkit-box-shadow: 3px 1px 6px 1px #c6c6c6;
-          box-shadow: 3px 1px 6px 1px #c6c6c6;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(8%, #ff79da), to(#9356dc));
-  background: linear-gradient(to bottom, #ff79da 8%, #9356dc 100%);
-  border-radius: 25px;
-  color: #ffffff;
-  font-family: "Roboto";
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bouton {
-  width: 220px;
-  height: 3em;
+  height: 15%;
   margin: 5% 0 5%;
   -webkit-box-shadow: 3px 1px 6px 1px #c6c6c6;
           box-shadow: 3px 1px 6px 1px #c6c6c6;
@@ -353,12 +327,16 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-.fa-heart:active {
+.fa-heart:hover {
   background-clip: text;
   -webkit-background-clip: text;
-  color: blue;
+  color: red;
+  z-index: 3;
 }
 
 /* ---------- Footer ---------- */
@@ -401,5 +379,20 @@ h1 {
 .list__contact {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: null) {
+  .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=style.css.map */
