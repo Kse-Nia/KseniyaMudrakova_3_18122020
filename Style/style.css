@@ -333,14 +333,17 @@ h1 {
 }
 
 .favoris {
+  /* visibility
   visibility: hidden;
+  */
 }
 
 .favoris:hover {
-  visibility: visible;
-  -webkit-animation: 10s rotate linear infinite;
-          animation: 10s rotate linear infinite;
-  background-clip: text;
+  /* visibility
+    visibility: visible;
+    */
+  -webkit-animation: 10s  linear infinite;
+          animation: 10s  linear infinite;
   -webkit-background-clip: text;
   color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));

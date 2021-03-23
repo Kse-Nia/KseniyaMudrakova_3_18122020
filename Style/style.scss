@@ -220,11 +220,14 @@ h1 {
 }
 
 .favoris {
+  /* visibility
   visibility: hidden;
+  */
   &:hover {
+    /* visibility
     visibility: visible;
-    animation: 10s rotate linear infinite;
-    background-clip: text;
+    */
+    animation: 10s  linear infinite;
     -webkit-background-clip: text;
     color: transparent;
     background-image: linear-gradient($primaire, $secondaire);
