@@ -22,6 +22,7 @@ h2 {
   padding: 5% 0 5% 5%;
   margin: 0;
 }
+
 /* ---------- Header ---------- */
 
 header {
@@ -31,6 +32,7 @@ header {
   justify-content: center;
   align-items: center;
 }
+
 h1 {
   margin: 0;
   padding: 0;
@@ -45,6 +47,7 @@ h1 {
   font-size: 1em;
   font-weight: 500;
   @include centrer;
+
   &__localicon {
     margin: 0 4% 0;
   }
@@ -57,10 +60,12 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &_text {
     width: 80%;
     text-align: center
   }
+
   &__bouton {
     @include bouton;
     @include centrer;
@@ -74,6 +79,7 @@ h1 {
   margin-top: 5%;
   display: flex;
   flex-direction: column;
+
   &__container {
     @include auto;
     margin: 0 0 5%;
@@ -84,6 +90,7 @@ h1 {
 .bloc {
   width: 90%;
   @include centrerow;
+
   &__cercle {
     width: 24px;
     height: 24px;
@@ -94,6 +101,7 @@ h1 {
     z-index: 2;
     @include centrer;
   }
+
   &__btn {
     width: 100%;
     min-height: 65px;
@@ -110,6 +118,7 @@ h1 {
     flex-direction: row;
     align-items: center;
   }
+
   &__text {
     width: 80%;
     padding-left: 5%;
@@ -120,9 +129,11 @@ h1 {
 .icon {
   padding: 0 5% 0;
   float: left;
+
   &--g {
     color: $icon;
   }
+
   &--v {
     color: $primaire;
   }
@@ -142,12 +153,14 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
   &__ancre {
     width: 90%;
     margin: 0;
     text-decoration: none !important;
     color: black;
   }
+
   &__case {
     width: 100%;
     height: auto;
@@ -158,15 +171,18 @@ h1 {
     flex-direction: column;
     justify-content: center;
   }
+
   &__img {
     width: 100%;
     height: 175px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
   }
+
   &__photo {
     position: relative;
   }
+
   &__btn {
     width: 80px;
     height: 30px;
@@ -185,11 +201,13 @@ h1 {
   margin: 0;
   display: flex;
   flex-direction: row;
+
   &_info {
     width: 90%;
     margin: 0;
   }
 }
+
 .fa-heart {
   height: auto;
   font-size: 25px;
@@ -198,14 +216,19 @@ h1 {
   display: flex;
   align-items: center;
   z-index: 1;
-  transition:all .2s ease-in-out;
-  &:hover{
+  transition: all .4s ease-in-out;
+}
+
+.favoris {
+  visibility: hidden;
+  &:hover {
+    visibility: visible;
+    animation: 10s rotate linear infinite;
     background-clip: text;
     -webkit-background-clip: text;
-    color: red;
-    z-index: 3;
+    color: transparent;
+    background-image: linear-gradient($primaire, $secondaire);
   }
-  
 }
 
 /* ---------- Footer ---------- */
@@ -221,6 +244,7 @@ h1 {
 .blocFooter {
   width: 100%;
   padding-left: 5%;
+
   &__logo {
     padding: 5% 0 5%;
     margin: 0;
@@ -234,16 +258,20 @@ h1 {
   margin: 0;
   line-height: 2em;
   list-style-type: none;
+
   .fa-utensils,
   .fa-hands-helping {
     padding: 0 3% 0 0;
   }
+
   &__lien {
     text-decoration: none;
   }
+
   &__contact {
     text-decoration: none;
     color: white;
   }
+
   @include desktop-only;
 }

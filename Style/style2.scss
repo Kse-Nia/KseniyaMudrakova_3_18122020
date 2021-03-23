@@ -114,6 +114,20 @@ body {
     @include shadow;
     display: flex;
     flex-direction: row;
+    &__check{
+      visibility: hidden;
+      width: 30%;
+      height: auto;
+      background-clip: green;
+      transition: all 1s ease-out;
+      &:hover{
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+      }
+    }
   }
   &__description {
     width: 70%;

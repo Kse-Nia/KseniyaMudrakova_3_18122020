@@ -328,15 +328,23 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-.fa-heart:hover {
+.favoris {
+  visibility: hidden;
+}
+
+.favoris:hover {
+  visibility: visible;
+  -webkit-animation: 10s rotate linear infinite;
+          animation: 10s rotate linear infinite;
   background-clip: text;
   -webkit-background-clip: text;
-  color: red;
-  z-index: 3;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(#9356dc, #ff79da);
 }
 
 /* ---------- Footer ---------- */
