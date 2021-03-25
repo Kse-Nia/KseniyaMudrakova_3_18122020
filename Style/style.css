@@ -16,7 +16,7 @@ main {
 }
 
 /* ---------- Header ---------- */
-header {
+.header {
   width: 100%;
   height: 65px;
   display: -webkit-box;
@@ -28,12 +28,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
   font-family: "Shrikhand", cursive;
+  -webkit-box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.25);
 }
 
 /* ---------- Main ---------- */
@@ -59,7 +56,7 @@ h1 {
 }
 
 .localisation__localicon {
-  margin: 0 4% 0;
+  margin: 0 3% 0;
 }
 
 .reservation {
@@ -76,6 +73,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .reservation__text {
@@ -108,6 +106,32 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1;
+}
+
+.reservation__bouton:hover__bg {
+  opacity: 1;
+}
+
+.reservation__bouton__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  opacity: 1;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+@media (min-width: 1000px) {
+  .reservation {
+    width: 95%;
+    margin: 1% 2% 1%;
+    border-radius: 10px;
+  }
 }
 
 /* Partie Fonctionnement */
@@ -121,6 +145,10 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.commande__title {
+  margin: 5% 0 5% 5%;
 }
 
 .commande__container {
@@ -139,8 +167,11 @@ h1 {
           align-items: center;
 }
 
-.commande__title {
-  margin: 5% 0 5% 5%;
+@media (min-width: 1000px) {
+  .commande {
+    width: 95%;
+    margin: 1% 2% 1%;
+  }
 }
 
 .bloc {
@@ -211,6 +242,14 @@ h1 {
   background-color: #a16be0;
   -webkit-transition-delay: 400ms;
           transition-delay: 400ms;
+}
+
+@media (min-width: 1000px) {
+  .bloc__btn {
+    min-height: 100px;
+    width: 60%;
+    margin: 1% 0 1%;
+  }
 }
 
 .bloc__text {
@@ -407,20 +446,5 @@ h1 {
 .list__contact {
   text-decoration: none;
   color: white;
-}
-
-@media screen and (min-width: null) {
-  .list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
 }
 /*# sourceMappingURL=style.css.map */

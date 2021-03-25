@@ -21,19 +21,17 @@ main {
 
 /* ---------- Header ---------- */
 
-header {
+.header {
   width: 100%;
   height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Shrikhand", cursive;
+  @include shadow;
+
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
-  font-family: "Shrikhand", cursive;
-}
 
 /* ---------- Main ---------- */
 
@@ -46,8 +44,9 @@ h1 {
   @include centrer;
 
   &__localicon {
-    margin: 0 4% 0;
+    margin: 0 3% 0;
   }
+
 }
 
 .reservation {
@@ -57,6 +56,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   &__text {
     width: 80%;
@@ -66,6 +66,31 @@ h1 {
   &__bouton {
     @include bouton;
     @include centrer;
+    z-index: 1;
+
+    &:hover {
+      &__bg {
+        opacity: 1;
+      }
+    }
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: lighten($secondaire, 50);
+      opacity: 1;
+      z-index: -1;
+      transition: opacity 250ms;
+    }
+  }
+
+  @media (min-width: 1000px){
+  width: 95%;
+    margin: 1% 2% 1%;
+    border-radius: 10px;
   }
 }
 
@@ -77,22 +102,26 @@ h1 {
   display: flex;
   flex-direction: column;
 
+  &__title {
+    margin: 5% 0 5% 5%;
+  }
+
   &__container {
     @include auto;
     margin: 0 0 5%;
     @include column;
   }
-
-  &__title {
-    margin: 5% 0 5% 5%;
+  @media (min-width: 1000px){
+    width: 95%;
+    margin: 1% 2% 1%;
   }
-
 }
 
 .bloc {
   width: 90%;
   @include centrerow;
   transition: all 1s ease-in;
+
   &__cercle {
     width: 24px;
     height: 24px;
@@ -119,10 +148,16 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    &:hover{
-    background-color: lighten($primaire, 5);
+
+    &:hover {
+      background-color: lighten($primaire, 5);
       transition-delay: 400ms;
     }
+    @media (min-width: 1000px){
+      min-height: 100px;
+      width: 60%;
+      margin: 1% 0 1%;
+  }
   }
 
   &__text {
@@ -130,6 +165,7 @@ h1 {
     padding-left: 5%;
     text-align: start;
   }
+
 }
 
 .icon {
@@ -293,6 +329,4 @@ h1 {
     text-decoration: none;
     color: white;
   }
-
-  @include desktop-only;
 }
