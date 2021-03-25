@@ -28,8 +28,8 @@
             <span class="localtext">Paris, Belleville</span>
         </div>
         <section class="reservation">
-            <div class="reservation_text">
-                <h2 >Réservez le menu qui vous convient</h2>
+            <div class="reservation__text">
+                <h2 class="reservation__title">Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionés par nos soins </p>
             </div>
             <div class="reservation__bouton">Explorer nos restaurants</div>
@@ -37,7 +37,7 @@
 
         <!--Partie Fonctionnement-->
         <div class="commande">
-            <h2>Fonctionnement</h2>
+            <h2 class="commande__title">Fonctionnement</h2>
             <div class="commande__container">
                 <div class="bloc">
                     <div class="bloc__cercle">1</div>
@@ -58,7 +58,7 @@
                     <div class="bloc__cercle">3</div>
                     <button class="bloc__btn">
                         <div class="bloc__text">
-                            <i class="icon icon--v fas fa-store"></i>Dégustez au restaurant
+                            <i class="icon icon--g fas fa-store"></i>Dégustez au restaurant
                     </button>
                 </div>
             </div>
@@ -66,17 +66,18 @@
     </div>
 
         <!--Partie restaurants-->
+
         <section class="restaurants">
             <h2 class="restaurants__title">Restaurants</h2>
 <div class="container">
-    <div class="carte">
+    <a class="carte" href="./menu_palette.html">
         <img class="carte__img" src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo assiette"/>
-        <span class="carte__new">
-            <p class="carte__txt">Nouveau</p>
-        </span>
+        <div class="carte__new">
+            <p>Nouveau</p>
+        </div>
         <div class="presentation">
             <div class="presentation__texte">
-                <h3 >La Palette du goût</h3>
+                <h3>La Palette du goût</h3>
                 <p>Ménilmontant</p>
             </div>
             <div class="presentation__favoris">
@@ -84,11 +85,53 @@
                 <i class="fas fa-heart plein"></i>
             </div>
         </div>
+</a>
+
+<a class="carte" href="./menu_note.html">
+    <img class="carte__img" src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo assiette"/>
+    <div class="carte__new">
+        <p>Nouveau</p>
     </div>
+    <div class="presentation">
+        <div class="presentation__texte">
+            <h3>La note enchantée</h3>
+            <p>Charonne</p>
+        </div>
+        <div class="presentation__favoris">
+            <i class="far fa-heart vide"></i>
+            <i class="fas fa-heart plein"></i>
+        </div>
+    </div>
+</a>
+
+<a class="carte" href="./menu_français.html">
+    <img class="carte__img" src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo assiette"/>
+    <div class="presentation">
+        <div class="presentation__texte">
+            <h3>A la française</h3>
+            <p>Cité Rouge</p>
+        </div>
+        <div class="presentation__favoris">
+            <i class="far fa-heart vide"></i>
+            <i class="fas fa-heart plein"></i>
+        </div>
+    </div>
+</a>
+
+<a class="carte" href="./menu_delice.html">
+    <img class="carte__img" src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo assiette"/>
+    <div class="presentation">
+        <div class="presentation__texte">
+            <h3>Le délice des sens</h3>
+            <p>Folie-Méricourt</p>
+        </div>
+        <div class="presentation__favoris">
+            <i class="far fa-heart vide"></i>
+            <i class="fas fa-heart plein"></i>
+        </div>
+    </div>
+</a>
 </div>
-
-
-
         </section>
     </main>
 
