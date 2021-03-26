@@ -67,7 +67,6 @@ main {
     @include bouton;
     @include centrer;
     z-index: 1;
-
     &:hover {
       &__bg {
         opacity: 1;
@@ -194,6 +193,12 @@ main {
     text-decoration: none !important;
     color: black;
   }
+  @media (min-width: 1000px){
+    width: 95%;
+    border-radius: 10px;
+    margin: 1% 2% 1%;
+    padding-bottom: 2%;
+  }
 }
 
 .container {
@@ -202,6 +207,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 1000px){
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .carte {
@@ -236,6 +246,11 @@ main {
       font-size: 0.9em;
       line-height: 30px;
     }
+  }
+  @media (min-width: 1000px){
+    width: 40%;
+    border-radius: 10px;
+    margin: 1% 2% 1%;
   }
 }
 

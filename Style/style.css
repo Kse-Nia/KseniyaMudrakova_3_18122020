@@ -293,6 +293,15 @@ main {
   color: black;
 }
 
+@media (min-width: 1000px) {
+  .restaurants {
+    width: 95%;
+    border-radius: 10px;
+    margin: 1% 2% 1%;
+    padding-bottom: 2%;
+  }
+}
+
 .container {
   width: 100%;
   height: auto;
@@ -306,6 +315,21 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .carte {
@@ -343,6 +367,14 @@ main {
   text-align: center;
   font-size: 0.9em;
   line-height: 30px;
+}
+
+@media (min-width: 1000px) {
+  .carte {
+    width: 40%;
+    border-radius: 10px;
+    margin: 1% 2% 1%;
+  }
 }
 
 .presentation {
