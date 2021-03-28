@@ -88,6 +88,7 @@ main {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff79da), to(#9356dc));
   background: linear-gradient(to bottom, #ff79da 10%, #9356dc 100%);
   border-radius: 25px;
+  border: none;
   color: #ffffff;
   font-family: "Roboto";
   text-decoration: none;
@@ -96,7 +97,7 @@ main {
 @media (min-width: 1000px) {
   .reservation__bouton {
     width: 300px;
-    height: 300px;
+    height: 15%;
     margin: 5% 0 1%;
   }
 }
@@ -431,6 +432,18 @@ main {
   margin: 0;
   line-height: 2em;
   list-style-type: none;
+}
+
+@media (min-width: 1000px) {
+  .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .list .fa-utensils,
