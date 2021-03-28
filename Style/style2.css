@@ -38,6 +38,7 @@ body {
   padding: 0;
   font-family: "Shrikhand", cursive;
   text-align: center;
+  line-height: auto;
 }
 
 .header__retour {
@@ -49,18 +50,21 @@ body {
   width: 100%;
 }
 
-.image {
+.mainMenu__image {
   width: 100%;
   height: 30%;
   position: relative;
   z-index: 1;
 }
 
-.image__plat {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media (min-width: 1000px) {
+  .mainMenu__image {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    margin: 1% auto 2%;
+    display: block;
+  }
 }
 
 .blocMenu {
@@ -78,6 +82,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 1000px) {
+  .blocMenu {
+    margin: 0 1% 1%;
+    border-radius: 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
 }
 
 .blocMenu__nom {
@@ -105,6 +120,13 @@ body {
   padding: 2% 0 2%;
   margin: 5% 0 0;
   border-bottom: 3px solid #99e2d0;
+}
+
+@media (min-width: 1000px) {
+  .type {
+    margin: 1% 0 0;
+    padding: 1% 0 1%;
+  }
 }
 
 .type__h3 {
@@ -156,6 +178,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media (min-width: 1000px) {
+  .cases__contenant {
+    width: 20%;
+    height: auto;
+    font-size: 1.4em;
+  }
 }
 
 .cases__contenant__check {

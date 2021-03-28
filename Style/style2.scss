@@ -21,17 +21,21 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   &__ancre {
     text-decoration: none;
     color: black;
   }
+
   &__logo {
     width: 70%;
     margin: 0 5% 0;
     padding: 0;
     font-family: "Shrikhand", cursive;
     text-align: center;
+    line-height: auto;
   }
+
   &__retour {
     font-size: 1.2em;
   }
@@ -41,17 +45,21 @@ body {
 
 .mainMenu {
   width: 100%;
-}
 
-.image {
-  width: 100%;
-  height: 30%;
-  position: relative;
-  z-index: 1;
-  &__plat {
+  &__image {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 30%;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 1000px) {
+      width: 50%;
+      height: auto;
+      border-radius: 20px;
+      margin: 1% auto 2%;
+      display: block;
+
+    }
   }
 }
 
@@ -65,9 +73,16 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+@media (min-width: 1000px) {
+margin: 0 1% 1%;
+border-radius: 20px;
+display: grid;
+grid-template-columns: auto;
+}
   &__nom {
     width: 80%;
   }
+
   &__titre {
     width: 100%;
     height: auto;
@@ -83,6 +98,10 @@ body {
   padding: 2% 0 2%;
   margin: 5% 0 0;
   border-bottom: 3px solid $tertiaire;
+@media (min-width: 1000px){
+  margin: 1% 0 0;;
+  padding: 1% 0 1%;
+}
   &__h3 {
     margin: 0;
   }
@@ -105,6 +124,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: "Roboto", sans-serif;
+
   &__contenant {
     width: 100%;
     padding: 0;
@@ -114,13 +134,19 @@ body {
     @include shadow;
     display: flex;
     flex-direction: row;
-    &__check{
+@media (min-width: 1000px){
+  width: 20%;
+  height: auto;
+  font-size: 1.4em;
+}
+    &__check {
       visibility: hidden;
       width: 30%;
       height: auto;
       background-clip: green;
       transition: all 1s ease-out;
-      &:hover{
+
+      &:hover {
         visibility: visible;
         display: flex;
         justify-content: center;
@@ -129,10 +155,12 @@ body {
       }
     }
   }
+
   &__description {
     width: 70%;
     margin-left: 5%;
   }
+
   &__prix {
     width: 20%;
     margin: 0 5% 0;
@@ -154,6 +182,7 @@ body {
 
 .blocFooter {
   padding-left: 5%;
+
   &__logo {
     padding: 5% 0 5%;
     margin: 0;
@@ -167,13 +196,16 @@ body {
   margin: 0;
   line-height: 2em;
   list-style-type: none;
+
   .fa-utensils,
   .fa-hands-helping {
     padding: 0 3% 0 0;
   }
+
   &__lien {
     text-decoration: none;
   }
+
   &__contact {
     text-decoration: none;
     color: white;
