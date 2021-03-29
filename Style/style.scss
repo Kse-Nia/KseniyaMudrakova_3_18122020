@@ -62,7 +62,7 @@ main {
     text-align: center
   }
 
-  &__bouton{
+  &__bouton {
     width: 220px;
     height: 15%;
     margin: 5% 0 5%;
@@ -72,11 +72,12 @@ main {
     color: #ffffff;
     font-family: "Roboto";
     text-decoration: none;
+
     @media (min-width: 1000px) {
       width: 300px;
       height: 15%;
       margin: 5% 0 1%;
-      
+
     }
   }
 }
@@ -107,8 +108,9 @@ main {
 
 .bloc {
   width: 90%;
+  height: auto;
   @include centrerow;
-  transition: all 1s ease-in;
+  transition: all 0.5s ease-in;
 
   &__cercle {
     width: 24px;
@@ -131,13 +133,14 @@ main {
     font-weight: 500;
     border: none;
     border-radius: 20px;
-    box-shadow: 3px 1px 8px 1px #c6c6c6;
-    z-index: 1;
     @include centrerow;
+    @include shadow;
+    z-index: 1;
+    transition: all 0.5s linear;
 
     &:hover {
-      background-color: lighten($primaire, 5);
-      transition-delay: 400ms;
+      background-color: $primaire;
+      opacity: 0.1;
     }
 
     @media (min-width: 1000px) {
@@ -322,10 +325,11 @@ main {
   line-height: 2em;
   list-style-type: none;
 
-  @media (min-width: 1000px){
+  @media (min-width: 1000px) {
     display: flex;
     flex-direction: row;
   }
+
   .fa-utensils,
   .fa-hands-helping {
     padding: 0 3% 0 0;

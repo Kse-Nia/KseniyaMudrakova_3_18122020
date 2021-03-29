@@ -12,6 +12,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+
 /* ---------- Header ---------- */
 
 .header {
@@ -58,7 +59,6 @@ body {
       border-radius: 20px;
       margin: 1% auto 2%;
       display: block;
-
     }
   }
 }
@@ -73,12 +73,14 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-@media (min-width: 1000px) {
-margin: 0 1% 1%;
-border-radius: 20px;
-display: grid;
-grid-template-columns: auto;
-}
+
+  @media (min-width: 1000px) {
+    margin: 0 1% 1%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto;
+  }
+
   &__nom {
     width: 80%;
   }
@@ -91,6 +93,7 @@ grid-template-columns: auto;
     align-items: center;
     font-family: "Shrikhand", cursive;
   }
+
 }
 
 .type {
@@ -98,10 +101,13 @@ grid-template-columns: auto;
   padding: 2% 0 2%;
   margin: 5% 0 0;
   border-bottom: 3px solid $tertiaire;
-@media (min-width: 1000px){
-  margin: 1% 0 0;;
-  padding: 1% 0 1%;
-}
+
+  @media (min-width: 1000px) {
+    margin: 1% 0 0;
+    ;
+    padding: 1% 0 1%;
+  }
+
   &__h3 {
     margin: 0;
   }
@@ -124,43 +130,41 @@ grid-template-columns: auto;
   justify-content: space-between;
   align-items: center;
   font-family: "Roboto", sans-serif;
-@media (min-width: 1000px){
-  flex-direction: row;
-}
-  &__case {
-    width: 100%;
-    padding: 0;
-    margin: 5% 0 5%;
-    background-color: white;
-    border-radius: 20px;
-    @include shadow;
-    display: flex;
-    flex-direction: row;
-@media (min-width: 1000px){
-  width: 30%;
-  height: auto;
-  font-size: 1.4em;
-}
-    &__check {
-      visibility: hidden;
-      width: 30%;
-      height: auto;
-      background-clip: green;
-      transition: all 1s ease-out;
 
-      &:hover {
-        visibility: visible;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateX(100%);
-      }
-    }
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    margin: 2% 0 2%;
+  }
+}
+
+.case {
+  width: 100%;
+  padding: 0;
+  margin: 4% 0 4%;
+  background-color: white;
+  border-radius: 20px;
+  @include shadow;
+  display: flex;
+  flex-direction: row;
+
+  @media (min-width: 1000px) {
+    width: 30%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    font-size: 1.4em;
   }
 
   &__description {
     width: 70%;
     margin-left: 5%;
+  }
+  &__nom{
+    font-weight: bold;
+  }
+  &__desc{
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
   }
 
   &__prix {
@@ -169,6 +173,47 @@ grid-template-columns: auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+  }
+
+  &__check {
+    visibility: hidden;
+    width: 30%;
+    height: auto;
+    background-clip: green;
+    transition: all 1s ease-out;
+
+    &:hover {
+      visibility: visible;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(100%);
+    }
+  }
+}
+
+.wrapbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__bouton {
+    width: 185px;
+    height: 50px;
+    padding: 0;
+    margin: 2% 0 2%;
+    background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
+    border-radius: 25px;
+    border: none;
+    color: #ffffff;
+    font-family: "Roboto";
+    text-decoration: none;
+
+    @media (min-width: 1000px) {
+      width: 250px;
+      height: 55px;
+      margin: 5% 0 1%;
+    }
   }
 }
 
@@ -199,10 +244,11 @@ grid-template-columns: auto;
   line-height: 2em;
   list-style-type: none;
 
-  @media (min-width: 1000px){
+  @media (min-width: 1000px) {
     display: flex;
     flex-direction: row;
   }
+
   .fa-utensils,
   .fa-hands-helping {
     padding: 0 3% 0 0;
