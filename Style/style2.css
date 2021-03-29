@@ -287,16 +287,13 @@ body {
 }
 
 /* ---------- Footer ---------- */
-.footer {
+.blocFooter {
   width: 100%;
   min-height: 200px;
+  padding-left: 5%;
   background-color: #353535;
   color: white;
   bottom: 0;
-}
-
-.blocFooter {
-  padding-left: 5%;
 }
 
 .blocFooter__logo {
@@ -315,6 +312,7 @@ body {
 
 @media (min-width: 1000px) {
   .list {
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -322,6 +320,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 

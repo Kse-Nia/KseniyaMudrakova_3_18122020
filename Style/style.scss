@@ -155,7 +155,6 @@ main {
     padding-left: 5%;
     text-align: start;
   }
-
 }
 
 .icon {
@@ -299,18 +298,13 @@ main {
 
 /* ---------- Footer ---------- */
 
-.footer {
+.blocFooter {
   width: 100%;
   min-height: 200px;
+  padding-left: 5%;
   background-color: $footer;
   color: white;
   bottom: 0;
-}
-
-.blocFooter {
-  width: 100%;
-  padding-left: 5%;
-
   &__logo {
     padding: 5% 0 5%;
     margin: 0;
@@ -326,8 +320,10 @@ main {
   list-style-type: none;
 
   @media (min-width: 1000px) {
+    width: 40%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .fa-utensils,
