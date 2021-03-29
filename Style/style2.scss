@@ -11,7 +11,9 @@ body {
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
 }
-
+*{
+  margin: 0;
+}
 
 /* ---------- Header ---------- */
 
@@ -139,6 +141,7 @@ body {
 
 .case {
   width: 100%;
+  height: auto;
   padding: 0;
   margin: 4% 0 4%;
   background-color: white;
@@ -156,25 +159,28 @@ body {
   }
 
   &__description {
-    width: 70%;
-    margin-left: 5%;
+    width: 85%;
+    margin: 1% 0 1% 5%;
+    line-height: 40px;
   }
 
   &__nom {
     font-weight: bold;
+    font-size: 0.9em;
   }
 
-  &__desc {
+  &__info {
     font-family: Roboto, sans-serif;
-    font-size: 18px;
+    font-size: 0.7em;
+    font-weight: lighter;
+ 
   }
 
   &__prix {
     width: 20%;
-    margin: auto 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    margin: auto 0 5%;
+    font-size: 0.8em;
+    font-weight: bold;
   }
 
   &__check {
