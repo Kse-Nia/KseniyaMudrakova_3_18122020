@@ -32,14 +32,11 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  animation-delay: 1.75s;
   z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
-  animation: loader 1s ease-out;
+  animation: loader 1s;
   animation-delay: 1.75s;
+  animation-fill-mode: forwards;
 
   &__container {
     width: fit-content;
@@ -59,7 +56,6 @@ main {
   animation-name: rotate;
   animation: rotate 1s ease-out 0.3s;
   animation-delay: 0.4s;
-
 }
 
 @keyframes rotate {
@@ -124,14 +120,19 @@ main {
 }
 
 @keyframes loader {
-  100% {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    display: none;
     opacity: 0;
-    z-index: -10;
   }
 } 
 
 // Animation coeurs
-
 
 @keyframes slide {
   0% {
