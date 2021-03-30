@@ -11,6 +11,7 @@ body {
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 /* ---------- Header ---------- */
@@ -142,20 +143,20 @@ body {
 .container {
   width: 100%;
   height: auto;
+  padding: 2% 0 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5% 0 5%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Roboto", sans-serif;
 }
 
@@ -167,7 +168,7 @@ body {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 2% 0 2%;
+    padding: 2% 0 2%;
   }
 }
 
@@ -203,7 +204,7 @@ body {
 @media (min-width: 1000px) {
   .case {
     width: 30%;
-    height: 15vh;
+    height: 13vh;
     padding: 0;
     margin: 1% 0 0;
     font-size: 1.4em;
@@ -262,12 +263,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .wrapbtn__bouton {

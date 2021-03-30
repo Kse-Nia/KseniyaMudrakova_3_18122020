@@ -25,10 +25,7 @@ main {
   position: fixed;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include centrer;
   z-index: 10000;
   background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
   animation: loader 1s linear;
@@ -38,10 +35,8 @@ main {
   &__container {
     width: fit-content;
     height: 15vh;
-    display: flex;
-    flex-direction: row;
+    @include centrerow;
     justify-content: space-between;
-    align-items: center;
     animation: bounce 0.9s ease-out 0.1s;
   }
 }
@@ -59,9 +54,7 @@ main {
 .header {
   width: 100%;
   height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centrer;
   font-family: "Shrikhand", cursive;
   @include shadow;
 }
@@ -87,9 +80,7 @@ main {
   width: 100%;
   height: 290px;
   background-color: $back;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include column;
   position: relative;
 
   &__title {
@@ -230,9 +221,7 @@ main {
 .container {
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include column;
 
   @media (min-width: 1000px) {
     display: flex;
