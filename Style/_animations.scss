@@ -1,5 +1,18 @@
-@keyframes coeur{
+// Animation Loader
 
+animation: loader 0.01s;
+animation-delay: 1.75s;
+animation-fill-mode: both;
+z-index: 10000;
+display:flex;
+align-items:center;
+justify-content:center;
+
+
+
+// Animation coeurs
+
+@keyframes coeur{
 }
 
   @keyframes slide {
