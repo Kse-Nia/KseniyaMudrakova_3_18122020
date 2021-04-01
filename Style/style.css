@@ -462,9 +462,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-line-pack: justify;
       align-content: space-between;
 }
@@ -604,17 +604,19 @@ main {
   left: 0;
   top: 0;
   z-index: 1;
+  visibility: visible;
 }
 
 .plein {
   position: absolute;
+  visibility: none;
   left: 0;
   top: 0;
   z-index: 2;
 }
 
 .plein:active {
-  visibility: visible;
+  display: block;
   -webkit-animation: 10s ease-in-out infinite;
           animation: 10s ease-in-out infinite;
   -webkit-background-clip: text;
