@@ -27,8 +27,8 @@ main {
   @include centrer;
   z-index: 10000;
   background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
-  animation: loader 2s linear;
-  animation-delay: 1.7s;
+  animation: loader 2.5s linear;
+  animation-delay: 2s;
   animation-fill-mode: both;
 
   &__container {
@@ -43,7 +43,7 @@ main {
   width: 100%;
   height: 40%;
   margin: 0 3% 0;
-  animation: zoomin 1s ease-in;
+  animation: zoomin 1s linear;
   animation-delay: 0.1s;
   animation-iteration-count: 2;
 
@@ -64,7 +64,7 @@ main {
   }
 
   &__5 {
-    animation-delay: 550ms;
+    animation-delay: 500ms;
   }
 }
 
@@ -216,9 +216,7 @@ main {
   @include auto;
   background-color: $back;
   padding-bottom: 15%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+ @include column;
   align-content: space-between;
 
   &__title {
@@ -323,16 +321,18 @@ main {
   left: 0;
   top: 0;
   z-index: 1;
+  visibility: visible;
 }
 
 .plein {
   position: absolute;
+  visibility: none;
   left: 0;
   top: 0;
   z-index: 2;
 
   &:active {
-    visibility: visible;
+    display: block;
     animation: 10s ease-in-out infinite;
     -webkit-background-clip: text;
     color: transparent;
