@@ -80,7 +80,7 @@ body {
   flex-direction: column;
 
   @media (min-width: 1000px) {
-    margin: 0 1% 1%;
+    margin: 0 0 1%;
     border-radius: 20px;
     display: flex;
   }
@@ -91,6 +91,7 @@ body {
 
   &__titre {
     width: 100%;
+    margin-bottom: 5%;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -111,19 +112,19 @@ body {
     padding: 1% 0 1%;
   }
 
-  &__h3 {
-    margin: 0;
-  }
+
 }
 
 .container {
   width: 100%;
   height: auto;
   padding: 2% 0 2%;
-@include column;
+  @include column;
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
-
+  &__nt1{
+    animation: top 1s ease-in;
+  }
   @media (min-width: 1000px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -141,7 +142,7 @@ body {
 
 .case {
   width: 100%;
-  height: auto;
+  min-height: auto;
   padding: 4% 0 4%;
   margin: 4% 0 4%;
   background-color: white;
@@ -150,12 +151,10 @@ body {
   @include shadow;
   display: flex;
   flex-direction: row;
-  
-  animation: top 0.5s ease-out both;
 
   @media (min-width: 1000px) {
     width: 30%;
-    height: 13vh;
+    min-height: 18vh;
     padding: 0;
     margin: 1% 0 0;
     font-size: 1.4em;
@@ -169,12 +168,12 @@ body {
 
   &__nom {
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   &__info {
     font-family: Roboto, sans-serif;
-    font-size: 0.7em;
+    font-size: 0.9em;
     font-weight: lighter;
 
   }
@@ -203,6 +202,21 @@ body {
   }
 }
 
+// Animation cases
+
+.delay{
+  &__nt1{
+    animation: zoomin 1s ease-in;
+  }
+  &__nt2{
+    animation: top 2 ease-in;
+  }
+  &__nt13{
+    animation: top 1s ease-in;
+  }
+}
+
+
 .wrapbtn {
   @include centrerow;
   justify-content: center;
@@ -217,6 +231,7 @@ body {
     border: none;
     color: #ffffff;
     font-family: "Roboto";
+    font-size: 1.2em;
     text-decoration: none;
 
     @media (min-width: 1000px) {
@@ -239,7 +254,6 @@ body {
 
   &__logo {
     padding: 5% 0 5%;
-    margin: 0;
     font-size: 1.2em;
     font-family: "Shrikhand", cursive;
   }
@@ -247,7 +261,6 @@ body {
 
 .list {
   padding: 0 0 10%;
-  margin: 0;
   line-height: 2em;
   list-style-type: none;
 

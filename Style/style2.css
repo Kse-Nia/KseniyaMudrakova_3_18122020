@@ -102,23 +102,23 @@
 
 @-webkit-keyframes top {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
   }
   100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes top {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
   }
   100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -217,7 +217,7 @@ body {
 
 @media (min-width: 1000px) {
   .blocMenu {
-    margin: 0 1% 1%;
+    margin: 0 0 1%;
     border-radius: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -231,6 +231,7 @@ body {
 
 .blocMenu__titre {
   width: 100%;
+  margin-bottom: 5%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -259,10 +260,6 @@ body {
   }
 }
 
-.type__h3 {
-  margin: 0;
-}
-
 .container {
   width: 100%;
   height: auto;
@@ -281,6 +278,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: "Roboto", sans-serif;
+}
+
+.container__nt1 {
+  -webkit-animation: top 1s ease-in;
+          animation: top 1s ease-in;
 }
 
 @media (min-width: 1000px) {
@@ -307,7 +309,7 @@ body {
 
 .case {
   width: 100%;
-  height: auto;
+  min-height: auto;
   padding: 4% 0 4%;
   margin: 4% 0 4%;
   background-color: white;
@@ -322,14 +324,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-animation: top 0.5s ease-out both;
-          animation: top 0.5s ease-out both;
 }
 
 @media (min-width: 1000px) {
   .case {
     width: 30%;
-    height: 13vh;
+    min-height: 18vh;
     padding: 0;
     margin: 1% 0 0;
     font-size: 1.4em;
@@ -344,12 +344,12 @@ body {
 
 .case__nom {
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .case__info {
   font-family: Roboto, sans-serif;
-  font-size: 0.7em;
+  font-size: 0.9em;
   font-weight: lighter;
 }
 
@@ -384,6 +384,21 @@ body {
           transform: translateX(100%);
 }
 
+.delay__nt1 {
+  -webkit-animation: zoomin 1s ease-in;
+          animation: zoomin 1s ease-in;
+}
+
+.delay__nt2 {
+  -webkit-animation: top 2 ease-in;
+          animation: top 2 ease-in;
+}
+
+.delay__nt13 {
+  -webkit-animation: top 1s ease-in;
+          animation: top 1s ease-in;
+}
+
 .wrapbtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,6 +426,7 @@ body {
   border: none;
   color: #ffffff;
   font-family: "Roboto";
+  font-size: 1.2em;
   text-decoration: none;
 }
 
@@ -434,14 +450,12 @@ body {
 
 .blocFooter__logo {
   padding: 5% 0 5%;
-  margin: 0;
   font-size: 1.2em;
   font-family: "Shrikhand", cursive;
 }
 
 .list {
   padding: 0 0 10%;
-  margin: 0;
   line-height: 2em;
   list-style-type: none;
 }
