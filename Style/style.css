@@ -159,10 +159,10 @@ main {
   z-index: 10000;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff79da), to(#9356dc));
   background: linear-gradient(to bottom, #ff79da 10%, #9356dc 100%);
-  -webkit-animation: loader 2s linear;
-          animation: loader 2s linear;
-  -webkit-animation-delay: 1.7s;
-          animation-delay: 1.7s;
+  -webkit-animation: loader 2.5s linear;
+          animation: loader 2.5s linear;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -191,8 +191,8 @@ main {
   width: 100%;
   height: 40%;
   margin: 0 3% 0;
-  -webkit-animation: zoomin 1s ease-in;
-          animation: zoomin 1s ease-in;
+  -webkit-animation: zoomin 1s linear;
+          animation: zoomin 1s linear;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
   -webkit-animation-iteration-count: 2;
@@ -220,8 +220,8 @@ main {
 }
 
 .ico__5 {
-  -webkit-animation-delay: 550ms;
-          animation-delay: 550ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 /* ---------- Header ---------- */
