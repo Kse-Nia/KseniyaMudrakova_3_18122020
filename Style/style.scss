@@ -29,7 +29,7 @@ main {
   z-index: 10000;
   background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
   animation: loader 1s linear;
-  animation-delay: 1.5s;
+  animation-delay: 1.1s;
   animation-fill-mode: both;
 
   &__container {
@@ -46,6 +46,21 @@ main {
   margin: 0 3% 0;
   animation: zoomin 2s ease-out;
   animation-delay: 0.1s;
+  &__1{
+    animation-delay: 100ms;
+  }
+  &__2{
+    animation-delay: 250ms;
+  }
+  &__3{
+    animation-delay: 350ms;
+  }
+  &__4{
+    animation-delay: 450ms;
+  }
+  &__5{
+    animation-delay: 550ms;
+  }
 }
 
 /* ---------- Header ---------- */
