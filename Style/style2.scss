@@ -203,19 +203,49 @@ body {
   }
 }
 
-// Animation cases
-
 .delay{
   &__nt1{
-    animation: zoomin 1s ease-in;
+    animation: 1s fadein ease-in-out;
+animation-delay: 200ms;
   }
   &__nt2{
-    animation: top 2 ease-in;
+    animation: 1s fadein ease-in-out;
+    //animation-delay: 300ms;
   }
-  &__nt13{
-    animation: top 1s ease-in;
+  &__nt3{
+    animation: 1s fadein ease-in-out;
+   // animation-delay: 400ms;
+  }
+  &__nt4{
+    animation: 1s fadein ease-in-out;
+    //animation-delay: 500ms;
+  }
+  &__nt5{
+    animation: 1s fadein ease-in-out;
+   // animation-delay: 600ms;
+  }
+  &__nt6{
+    animation: 1s fadein ease-in-out;
+    //animation-delay: 700ms;
+  }
+  &__nt7{
+    animation: 1s fadein ease-in-out;
+    //animation-delay: 700ms;
+  }
+  &__nt8{
+    animation: 1s fadein ease-in-out;
+    //animation-delay: 700ms;
+  }
+  &__nt9{
+    animation: 1s fadein ease-in-out;
+    //animation-delay: 700ms;
+  }
+  &__nt10{
+    animation: 1s fadein ease-in-out;
+    //animation-delay: 700ms;
   }
 }
+
 
 
 .wrapbtn {

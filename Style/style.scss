@@ -11,6 +11,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 
 main {
@@ -106,25 +107,52 @@ main {
     width: 80%;
     text-align: center
   }
+}
 
-  &__bouton {
-    width: 220px;
-    height: 15%;
-    margin: 5% 0 5%;
-    background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
-    border-radius: 25px;
-    border: none;
-    color: #ffffff;
-    font-family: "Roboto";
-    font-size: 1em;
-    text-decoration: none;
+.bouton {
+  width: 220px;
+  height: 15%;
+  margin: 5% 0 5%;
+  background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
+  border-radius: 25px;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 1em;
+  position: relative;
+  z-index: 1;
 
-    @media (min-width: 1000px) {
-      width: 20%;
-      height: 20%;
-      margin: 5% 0 1%;
-      font-size: 1.2em;
+  &:hover {
+    &::after {
+      opacity: 1;
     }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lighter($light, 5);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+  }
+
+  @media (min-width: 1000px) {
+    width: 30%;
+    height: 20%;
+    margin: 5% 0 1%;
+    font-size: 1.2em;
+  }
+
+  @media (min-width: 1500px) {
+    width: 20%;
+    height: 55px;
+    margin: 5% 0 1%;
+    font-size: 1.2em;
   }
 }
 
@@ -216,7 +244,8 @@ main {
   @include auto;
   background-color: $back;
   padding-bottom: 15%;
- @include column;
+  display: flex;
+  flex-direction: column;
   align-content: space-between;
 
   &__title {
@@ -284,7 +313,6 @@ main {
 
   @media (min-width: 1000px) {
     width: 40%;
-    border-radius: 10px;
     margin: 1% 2% 1%;
   }
 }
@@ -376,12 +404,9 @@ main {
     padding: 0 3% 0 0;
   }
 
-  &__lien {
-    text-decoration: none;
-  }
 
   &__contact {
-    text-decoration: none;
     color: white;
+
   }
 }
