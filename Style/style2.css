@@ -1,3 +1,4 @@
+/* --- Animations Loader --- */
 @-webkit-keyframes zoomin {
   0% {
     -webkit-transform: scale(0.3, 0.3);
@@ -12,7 +13,6 @@
             transform: scale(0.3, 0.3);
   }
 }
-
 @keyframes zoomin {
   0% {
     -webkit-transform: scale(0.3, 0.3);
@@ -48,6 +48,7 @@
   }
 }
 
+/* --- Animations Coeurs --- */
 @-webkit-keyframes slide {
   0% {
     -webkit-transform: translateX(0);
@@ -58,7 +59,6 @@
     transform: translateX(-100px);
   }
 }
-
 @keyframes slide {
   0% {
     -webkit-transform: translateX(0);
@@ -70,6 +70,7 @@
   }
 }
 
+/* --- Animations Cartes Menus --- */
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
@@ -81,7 +82,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -95,26 +95,16 @@
 }
 
 @-webkit-keyframes top {
-  0% {
-    opacity: 0;
+  from {
   }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
+  to {
   }
 }
 
 @keyframes top {
-  0% {
-    opacity: 0;
+  from {
   }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
+  to {
   }
 }
 
@@ -381,55 +371,93 @@ body {
 }
 
 .delay__nt1 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.delay__nt2 {
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+.delay__nt3 {
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
   -webkit-animation-delay: 200ms;
           animation-delay: 200ms;
 }
 
-.delay__nt2 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
-}
-
-.delay__nt3 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
-}
-
 .delay__nt4 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
 }
 
 .delay__nt5 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
 .delay__nt6 {
   -webkit-animation: 1s fadein ease-in-out;
           animation: 1s fadein ease-in-out;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
 }
 
 .delay__nt7 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 
 .delay__nt8 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 450ms;
+          animation-delay: 450ms;
 }
 
 .delay__nt9 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 .delay__nt10 {
-  -webkit-animation: 1s fadein ease-in-out;
-          animation: 1s fadein ease-in-out;
+  -webkit-animation: 1s fadein ease-in;
+          animation: 1s fadein ease-in;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation-delay: 550ms;
+          animation-delay: 550ms;
 }
 
 .wrapbtn {
