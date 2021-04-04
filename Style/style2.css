@@ -1,4 +1,23 @@
 /* --- Animations Loader --- */
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes zoomin {
   0% {
     -webkit-transform: scale(0.3, 0.3);
@@ -13,6 +32,7 @@
             transform: scale(0.3, 0.3);
   }
 }
+
 @keyframes zoomin {
   0% {
     -webkit-transform: scale(0.3, 0.3);
@@ -25,26 +45,6 @@
   100% {
     -webkit-transform: scale(0.3, 0.3);
             transform: scale(0.3, 0.3);
-  }
-}
-
-@-webkit-keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
-@keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    visibility: hidden;
-    opacity: 0;
   }
 }
 
@@ -375,8 +375,8 @@ body {
           animation: 1s fadein ease-in;
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
 }
 
 .delay__nt2 {
