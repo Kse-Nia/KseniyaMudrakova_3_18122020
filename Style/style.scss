@@ -341,6 +341,7 @@ main {
   top: 0;
   z-index: 1;
   visibility: visible;
+  -webkit-background-clip: text;
 }
 
 .plein {
