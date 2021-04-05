@@ -491,6 +491,8 @@ body {
   font-family: "Roboto";
   font-size: 1.2em;
   text-decoration: none;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 1000px) {
@@ -499,6 +501,26 @@ body {
     height: 55px;
     margin: 5% 0 1%;
   }
+}
+
+.wrapbtn__bouton:hover:after {
+  opacity: 1;
+}
+
+.wrapbtn__bouton:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fface8), to(#ae80e5));
+  background: linear-gradient(to bottom, #fface8 20%, #ae80e5 100%);
+  border-radius: 25px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
 }
 
 /* ---------- Footer ---------- */

@@ -110,7 +110,15 @@ main {
 }
 
 .bouton {
- @include bouton;
+  width: 220px;
+  height: 15%;
+  margin: 5% 0 5%;
+  background: linear-gradient(to bottom, $secondaire 10%, $primaire 100%);
+  border-radius: 25px;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 1em;
   position: relative;
   z-index: 1;
 
@@ -120,17 +128,8 @@ main {
     }
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: lighter($light, 5);
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 250ms;
+  &:after {
+@include hoverbtn;
   }
 
   @media (min-width: 1000px) {

@@ -286,11 +286,20 @@ body {
     font-family: "Roboto";
     font-size: 1.2em;
     text-decoration: none;
-
+position: relative;
+z-index: 1;
     @media (min-width: 1000px) {
       width: 250px;
       height: 55px;
       margin: 5% 0 1%;
+    }
+    &:hover{
+      &:after{
+        opacity: 1;
+      }
+    }
+    &:after{
+      @include hoverbtn;
     }
   }
 }
