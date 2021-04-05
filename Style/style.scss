@@ -129,7 +129,7 @@ main {
   }
 
   &:after {
-@include hoverbtn;
+    @include hoverbtn;
   }
 
   @media (min-width: 1000px) {
@@ -345,13 +345,14 @@ main {
 
 .plein {
   position: absolute;
-  visibility: none;
+  visibility: hidden;
   left: 0;
   top: 0;
   z-index: 2;
 
   &:active {
     display: block;
+    visibility: visible;
     animation: 10s ease-in-out infinite;
     -webkit-background-clip: text;
     color: transparent;
@@ -374,7 +375,8 @@ main {
     margin: 0;
     font-family: "Shrikhand", cursive;
     font-size: 1.2em;
-    @media (min-width:1000px){
+
+    @media (min-width:1000px) {
       font-size: 1.9em;
     }
   }

@@ -622,7 +622,7 @@ main {
 
 .plein {
   position: absolute;
-  visibility: none;
+  visibility: hidden;
   left: 0;
   top: 0;
   z-index: 2;
@@ -630,6 +630,7 @@ main {
 
 .plein:active {
   display: block;
+  visibility: visible;
   -webkit-animation: 10s ease-in-out infinite;
           animation: 10s ease-in-out infinite;
   -webkit-background-clip: text;
