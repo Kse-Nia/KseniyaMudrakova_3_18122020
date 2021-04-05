@@ -145,39 +145,41 @@ body {
 
 .case {
   width: 100%;
-  min-height: auto;
+  height: 75px;
   padding: 4% 0 4%;
   margin: 4% 0 4%;
   background-color: white;
   border-radius: 20px;
-  font-size: 1.4em;
   @include shadow;
   display: flex;
   flex-direction: row;
 
   @media (min-width: 1000px) {
     width: 30%;
+    height: 85px;
     min-height: 18vh;
     padding: 0;
     margin: 1% 0 0;
-    font-size: 1.4em;
+    padding: 1%;
+    font-size: 1.2em;
   }
 
   &__description {
     width: 85%;
-    margin: 1% 0 1% 5%;
-    line-height: 40px;
+    margin: 0 0 1% 5%;
   }
 
   &__nom {
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.2em;
+    margin-bottom: 3%;
   }
 
   &__info {
     font-family: Roboto, sans-serif;
-    font-size: 0.9em;
+    font-size: em;
     font-weight: lighter;
+    color: grey;
 
   }
 

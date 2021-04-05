@@ -296,7 +296,7 @@ main {
   z-index: 1;
 }
 
-.bouton:hover::after {
+.bouton:hover:after {
   opacity: 1;
 }
 
