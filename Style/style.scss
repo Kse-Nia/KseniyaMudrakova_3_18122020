@@ -200,19 +200,39 @@ main {
     border-radius: 20px;
     @include centrerow;
     @include shadow;
+    position: relative;
     z-index: 1;
-    transition: all 0.5s linear;
-
-    &:hover {
-      background-color: $primaire;
-      opacity: 0.1;
-    }
 
     @media (min-width: 1000px) {
       min-height: 100px;
       width: 60%;
       margin: 1% 0 1%;
     }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        cursor: pointer;
+      }
+      &.icon{
+        color: $primaire;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $hover;
+      border-radius: 20px;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 400ms;
+    }
+
   }
 
   &__text {
@@ -226,7 +246,7 @@ main {
   padding: 0 5% 0;
   float: left;
   color: $icon;
-
+  font-size: 1.3em;
 }
 
 /* ---------- Partie restaurants ---------- */
@@ -323,41 +343,42 @@ main {
     }
   }
 
-  &__favoris {
-    width: 10%;
-    margin: 2%;
-    font-size: 1.8em;
-    position: relative;
-  }
-
   &__name {
     margin: 2%;
   }
 }
 
-.vide {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  visibility: visible;
-  -webkit-background-clip: text;
-}
+.favoris {
+  width: 10%;
+  margin: 2%;
+  font-size: 1.8em;
+  position: relative;
+  display: block;
 
-.plein {
-  position: absolute;
-  visibility: hidden;
-  left: 0;
-  top: 0;
-  z-index: 2;
-
-  &:active {
-    display: block;
+  &__vide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
     visibility: visible;
-    animation: 10s ease-in-out infinite;
     -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient($primaire, $secondaire);
+  }
+
+  &__plein {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    &:active {
+      visibility: visible;
+      animation: 10s ease-in-out infinite;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient($primaire, $secondaire);
+    }
   }
 }
 
@@ -404,6 +425,5 @@ main {
 
   &__contact {
     color: white;
-
   }
 }

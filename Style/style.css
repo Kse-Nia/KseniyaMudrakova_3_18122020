@@ -436,14 +436,8 @@ main {
           align-items: center;
   -webkit-box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
   z-index: 1;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-
-.bloc__btn:hover {
-  background-color: #9356dc;
-  opacity: 0.1;
 }
 
 @media (min-width: 1000px) {
@@ -452,6 +446,30 @@ main {
     width: 60%;
     margin: 1% 0 1%;
   }
+}
+
+.bloc__btn:hover:after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.bloc__btn:hover.icon {
+  color: #9356dc;
+}
+
+.bloc__btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f5edff;
+  border-radius: 20px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms;
 }
 
 .bloc__text {
@@ -464,6 +482,7 @@ main {
   padding: 0 5% 0;
   float: left;
   color: #7e7e7e;
+  font-size: 1.3em;
 }
 
 /* ---------- Partie restaurants ---------- */
@@ -601,18 +620,19 @@ main {
   padding: 0 0 0 1%;
 }
 
-.presentation__favoris {
-  width: 10%;
-  margin: 2%;
-  font-size: 1.8em;
-  position: relative;
-}
-
 .presentation__name {
   margin: 2%;
 }
 
-.vide {
+.favoris {
+  width: 10%;
+  margin: 2%;
+  font-size: 1.8em;
+  position: relative;
+  display: block;
+}
+
+.favoris__vide {
   position: absolute;
   left: 0;
   top: 0;
@@ -621,7 +641,8 @@ main {
   -webkit-background-clip: text;
 }
 
-.plein {
+.favoris__plein {
+  display: block;
   position: absolute;
   visibility: hidden;
   left: 0;
@@ -629,8 +650,7 @@ main {
   z-index: 2;
 }
 
-.plein:active {
-  display: block;
+.favoris__plein:active {
   visibility: visible;
   -webkit-animation: 10s ease-in-out infinite;
           animation: 10s ease-in-out infinite;
