@@ -38,7 +38,7 @@ body {
     padding: 0;
     font-family: "Shrikhand", cursive;
     text-align: center;
-    line-height: auto;
+
   }
 
   &__retour {
@@ -123,9 +123,6 @@ body {
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
 
-  &__nt1 {
-    animation: top 1s ease-in;
-  }
 
   @media (min-width: 1000px) {
     flex-direction: row;
@@ -146,13 +143,20 @@ body {
 .case {
   width: 100%;
   height: 75px;
-  padding: 4% 0 4%;
-  margin: 4% 0 4%;
+  margin: 2% 0 2%;
   background-color: white;
   border-radius: 20px;
   @include shadow;
   display: flex;
   flex-direction: row;
+  animation: 1s fadein ease-in;
+  transform-origin: top;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{i}) {
+      animation-delay: $i * 100ms;
+    }
+  }
 
   @media (min-width: 1000px) {
     width: 30%;
@@ -207,68 +211,6 @@ body {
   }
 }
 
-.delay {
-  &__nt1 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 150ms;
-  }
-
-  &__nt2 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 150ms;
-  }
-
-  &__nt3 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 200ms;
-  }
-
-  &__nt4 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 250ms;
-  }
-
-  &__nt5 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 300ms;
-  }
-
-  &__nt6 {
-    animation: 1s fadein ease-in-out;
-    transform-origin: top;
-    animation-delay: 350ms;
-  }
-
-  &__nt7 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 400ms;
-  }
-
-  &__nt8 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 450ms;
-  }
-
-  &__nt9 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 500ms;
-  }
-
-  &__nt10 {
-    animation: 1s fadein ease-in;
-    transform-origin: top;
-    animation-delay: 550ms;
-  }
-}
-
 
 .wrapbtn {
   @include centrerow;
@@ -286,19 +228,22 @@ body {
     font-family: "Roboto";
     font-size: 1.2em;
     text-decoration: none;
-position: relative;
-z-index: 1;
+    position: relative;
+    z-index: 1;
+
     @media (min-width: 1000px) {
       width: 250px;
       height: 55px;
       margin: 5% 0 1%;
     }
-    &:hover{
-      &:after{
+
+    &:hover {
+      &:after {
         opacity: 1;
       }
     }
-    &:after{
+
+    &:after {
       @include hoverbtn;
     }
   }

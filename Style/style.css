@@ -94,17 +94,25 @@
   }
 }
 
-@-webkit-keyframes top {
-  from {
+@-webkit-keyframes Appear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
-  to {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-@keyframes top {
-  from {
+@keyframes Appear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
-  to {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -146,8 +154,8 @@ main {
   z-index: 10000;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff79da), to(#9356dc));
   background: linear-gradient(to bottom, #ff79da 10%, #9356dc 100%);
-  -webkit-animation: loader 2200ms linear;
-          animation: loader 2200ms linear;
+  -webkit-animation: loader 2100ms ease-in;
+          animation: loader 2100ms ease-in;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-fill-mode: both;
@@ -178,12 +186,8 @@ main {
   width: 100%;
   height: 40%;
   margin: 0 3% 0;
-  -webkit-animation: zoomin 1100ms linear;
-          animation: zoomin 1100ms linear;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
+  -webkit-animation: zoomin 1s 2 linear;
+          animation: zoomin 1s 2 linear;
 }
 
 .ico__1 {
@@ -207,8 +211,8 @@ main {
 }
 
 .ico__5 {
-  -webkit-animation-delay: 550ms;
-          animation-delay: 550ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 /* ---------- Header ---------- */
