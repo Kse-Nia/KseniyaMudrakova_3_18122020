@@ -130,6 +130,42 @@
   }
 }
 
+@-webkit-keyframes roll-back {
+  100% {
+    -webkit-transform: translateX(800px) rotate(700deg);
+            transform: translateX(800px) rotate(700deg);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(100px) rotate(700deg);
+            transform: translateX(100px) rotate(700deg);
+    opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-back {
+  100% {
+    -webkit-transform: translateX(800px) rotate(700deg);
+            transform: translateX(800px) rotate(700deg);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(100px) rotate(700deg);
+            transform: translateX(100px) rotate(700deg);
+    opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes appear {
   0% {
     opacity: 0;
@@ -421,6 +457,7 @@ body {
   margin: auto 0 auto 5%;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .case__nom {
@@ -477,17 +514,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 300ms ease-in;
-  transition: -webkit-transform 300ms ease-in;
-  transition: transform 300ms ease-in;
-  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
-  visibility: none;
+  -webkit-transition: -webkit-transform 300ms ease-in 300ms;
+  transition: -webkit-transform 300ms ease-in 300ms;
+  transition: transform 300ms ease-in 300ms;
+  transition: transform 300ms ease-in 300ms, -webkit-transform 300ms ease-in 300ms;
 }
 
 .case:hover .case__check {
   -webkit-transform: translatex(-90%);
           transform: translatex(-90%);
-  visibility: visible;
 }
 
 .case:hover .case__prix {
@@ -496,13 +531,15 @@ body {
 }
 
 .case:hover .icon {
-  -webkit-animation: roll-in 500ms ease-out;
-          animation: roll-in 500ms ease-out;
+  -webkit-animation: roll-in 500ms forwards 200ms;
+          animation: roll-in 500ms forwards 200ms;
 }
 
 .icon {
   font-size: 1em;
   color: #ffffff;
+  -webkit-animation: roll-back 500ms forwards 200ms;
+          animation: roll-back 500ms forwards 200ms;
 }
 
 .wrapbtn {

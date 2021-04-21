@@ -171,6 +171,7 @@ body {
     margin: auto 0 auto 5%;
     text-overflow: ellipsis;
     overflow: hidden;
+    white-space: nowrap;
   }
 
   &__nom {
@@ -214,13 +215,11 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: transform 300ms ease-in;
-    visibility: none;
+    transition: transform 300ms ease-in 300ms;
   }
 
   &:hover &__check {
     transform: translatex(-90%);
-    visibility: visible;
   }
 
   &:hover &__prix {
@@ -228,13 +227,14 @@ body {
   }
 
   &:hover .icon {
-    animation: roll-in 500ms ease-out;
+   animation: roll-in 500ms forwards 200ms;
   }
 }
 
 .icon {
   font-size: 1em;
   color: #ffffff;
+  animation: roll-back 500ms forwards 200ms;
 }
 
 .wrapbtn {
