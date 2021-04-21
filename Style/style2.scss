@@ -215,7 +215,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: transform 300ms ease-in 300ms;
+    transition: transform 300ms ease-in ;
   }
 
   &:hover &__check {
@@ -227,14 +227,14 @@ body {
   }
 
   &:hover .icon {
-   animation: roll-in 500ms forwards 200ms;
+   animation: roll-in 300ms forwards 100ms;
   }
 }
 
 .icon {
   font-size: 1em;
   color: #ffffff;
-  animation: roll-back 500ms forwards 200ms;
+  animation: roll-back 300ms forwards ;
 }
 
 .wrapbtn {

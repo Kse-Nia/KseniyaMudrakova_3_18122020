@@ -514,10 +514,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 300ms ease-in 300ms;
-  transition: -webkit-transform 300ms ease-in 300ms;
-  transition: transform 300ms ease-in 300ms;
-  transition: transform 300ms ease-in 300ms, -webkit-transform 300ms ease-in 300ms;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
 }
 
 .case:hover .case__check {
@@ -531,15 +531,15 @@ body {
 }
 
 .case:hover .icon {
-  -webkit-animation: roll-in 500ms forwards 200ms;
-          animation: roll-in 500ms forwards 200ms;
+  -webkit-animation: roll-in 300ms forwards 100ms;
+          animation: roll-in 300ms forwards 100ms;
 }
 
 .icon {
   font-size: 1em;
   color: #ffffff;
-  -webkit-animation: roll-back 500ms forwards 200ms;
-          animation: roll-back 500ms forwards 200ms;
+  -webkit-animation: roll-back 300ms forwards;
+          animation: roll-back 300ms forwards;
 }
 
 .wrapbtn {
