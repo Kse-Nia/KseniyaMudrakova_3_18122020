@@ -98,7 +98,6 @@ body {
     align-items: center;
     font-family: "Shrikhand", cursive;
   }
-
 }
 
 .type {
@@ -111,8 +110,6 @@ body {
     margin: 1% 0 0;
     padding: 1% 0 1%;
   }
-
-
 }
 
 .container {
@@ -152,12 +149,13 @@ body {
   flex-direction: row;
   position: relative;
   overflow: hidden;
-  animation: 1s fadein ease-in;
+  animation: appear 1500ms ease-in;
   transform-origin: top;
+
 
   @for $i from 1 through 10 {
     &:nth-child(#{i}) {
-      animation-delay: $i * 100ms;
+      animation-delay: $i * 200ms;
     }
   }
 
@@ -168,23 +166,29 @@ body {
   }
 
   &__description {
-    width: 70%;
+    width: 75%;
     height: auto;
     margin: auto 0 auto 5%;
     text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   &__nom {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 3%;
+   /* text-overflow: ellipsis;
+    overflow: hidden;
+    */
   }
 
   &__info {
     font-family: Roboto, sans-serif;
     font-weight: lighter;
     color: grey;
-
+   /* text-overflow: ellipsis;
+    overflow: hidden;
+    */
   }
 
   &__prix {
@@ -194,16 +198,16 @@ body {
     font-size: 0.9;
     font-weight: bold;
     display: flex;
-    align-items: flex-end; 
+    align-items: flex-end;
     transition: transform 300ms ease-in;
   }
 
   &__check {
     background-color: $tertiaire;
-    width: 20%;
+    width: 25%;
     height: 100%;
     position: absolute;
-    right: -20%;
+    right: -25%;
     font-size: 1.4em;
     color: white;
     display: flex;
@@ -215,18 +219,20 @@ body {
   }
 
   &:hover &__check {
-  transform: translatex(-90%);
-  visibility: visible;
+    transform: translatex(-90%);
+    visibility: visible;
   }
-  &:hover &__prix{
+
+  &:hover &__prix {
     transform: translatex(-80%);
   }
-  &:hover .icon{
+
+  &:hover .icon {
     animation: roll-in 500ms ease-out;
   }
 }
 
-.icon{
+.icon {
   font-size: 1em;
   color: #ffffff;
 }
