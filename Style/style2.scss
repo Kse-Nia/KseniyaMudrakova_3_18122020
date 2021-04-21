@@ -164,10 +164,7 @@ body {
   @media (min-width: 1000px) {
     width: 30%;
     height: 120px;
-    //height: 85px;
-    //min-height: 18vh;
     margin: 1% 0 0;
-    //padding: 1%;
   }
 
   &__description {
@@ -194,7 +191,6 @@ body {
     width: 15%;
     height: auto;
     padding-bottom: 5%;
-   // background-color: red;
     font-size: 0.9;
     font-weight: bold;
     display: flex;
@@ -204,9 +200,8 @@ body {
 
   &__check {
     background-color: $tertiaire;
-    width: 35%;
+    width: 20%;
     height: 100%;
-    margin-right: -15%;
     position: absolute;
     right: -20%;
     font-size: 1.4em;
@@ -220,14 +215,21 @@ body {
   }
 
   &:hover &__check {
-  transform: translatex(-70%);
+  transform: translatex(-90%);
   visibility: visible;
   }
   &:hover &__prix{
     transform: translatex(-80%);
   }
+  &:hover .icon{
+    animation: roll-in 500ms ease-out;
+  }
 }
 
+.icon{
+  font-size: 1em;
+  color: #ffffff;
+}
 
 .wrapbtn {
   @include centrerow;
