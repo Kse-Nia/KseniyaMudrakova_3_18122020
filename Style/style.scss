@@ -212,10 +212,6 @@ main {
         opacity: 1;
         cursor: pointer;
       }
-
-      &.icon {
-        color: $primaire;
-      }
     }
 
     &:after {
@@ -231,7 +227,10 @@ main {
       z-index: -1;
       transition: opacity 400ms;
     }
-
+    
+    &:hover .icon{
+      color: $primaire;
+    }
   }
 
   &__text {
