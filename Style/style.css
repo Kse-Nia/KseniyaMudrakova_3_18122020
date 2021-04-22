@@ -70,6 +70,30 @@
   }
 }
 
+@-webkit-keyframes gradient {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* --- Animations Cartes Menus --- */
 @-webkit-keyframes fadein {
   0% {
@@ -94,6 +118,7 @@
   }
 }
 
+/* --- Animation Check --- */
 @-webkit-keyframes roll-in {
   0% {
     -webkit-transform: translateX(800px) rotate(700deg);
@@ -111,7 +136,6 @@
     opacity: 1;
   }
 }
-
 @keyframes roll-in {
   0% {
     -webkit-transform: translateX(800px) rotate(700deg);
@@ -707,7 +731,6 @@ main {
   margin: 2%;
   font-size: 1.8em;
   position: relative;
-  display: block;
 }
 
 .favoris__vide {
@@ -720,22 +743,28 @@ main {
 }
 
 .favoris__plein {
-  display: block;
+  background-color: transparent;
   position: absolute;
-  visibility: hidden;
   left: 0;
   top: 0;
   z-index: 2;
 }
 
 .favoris__plein:active {
-  visibility: visible;
-  -webkit-animation: 10s ease-in-out infinite;
-          animation: 10s ease-in-out infinite;
+  /*visibility: visible;
+      animation: slide 10s ease-in-out infinite;
+      -webkit-background-clip: text;
+      background-image: linear-gradient($primaire, $secondaire);
+      */
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-animation: gradient .7s ease infinite;
+          animation: gradient .7s ease infinite;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 /* ---------- Footer ---------- */
