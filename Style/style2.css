@@ -385,13 +385,46 @@ body {
 }
 
 .favoris {
-  width: 20%;
-  height: auto;
-  font-size: 1.4em;
-  color: #7e7e7e;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 10%;
+  margin: 2%;
+  font-size: 1.8em;
+  position: relative;
+}
+
+.favoris__vide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  visibility: visible;
+  -webkit-background-clip: text;
+}
+
+.favoris__plein {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.favoris__plein:active {
+  /*visibility: visible;
+      animation: slide 10s ease-in-out infinite;
+      -webkit-background-clip: text;
+      background-image: linear-gradient($primaire, $secondaire);
+      */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-animation: gradient .7s ease infinite;
+          animation: gradient .7s ease infinite;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .case {

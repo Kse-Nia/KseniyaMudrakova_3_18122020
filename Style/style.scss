@@ -363,7 +363,9 @@ main {
   }
 
   &__plein {
-    background-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
     position: absolute;
     left: 0;
     top: 0;
