@@ -752,12 +752,7 @@ main {
   z-index: 2;
 }
 
-.favoris__plein:active {
-  /*visibility: visible;
-      animation: slide 10s ease-in-out infinite;
-      -webkit-background-clip: text;
-      background-image: linear-gradient($primaire, $secondaire);
-      */
+.favoris__plein:hover {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

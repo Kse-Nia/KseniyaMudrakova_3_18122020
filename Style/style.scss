@@ -371,13 +371,7 @@ main {
     top: 0;
     z-index: 2;
 
-    &:active {
-      /*visibility: visible;
-      animation: slide 10s ease-in-out infinite;
-      -webkit-background-clip: text;
-      background-image: linear-gradient($primaire, $secondaire);
-      */
-
+    &:hover {
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;

@@ -353,7 +353,7 @@ body {
 
 .container {
   width: 100%;
-  height: 50%;
+  height: auto;
   padding: 10% 0 2%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -410,12 +410,7 @@ body {
   z-index: 2;
 }
 
-.favoris__plein:active {
-  /*visibility: visible;
-      animation: slide 10s ease-in-out infinite;
-      -webkit-background-clip: text;
-      background-image: linear-gradient($primaire, $secondaire);
-      */
+.favoris__plein:hover {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -446,12 +441,12 @@ body {
   overflow: hidden;
   -webkit-animation: appear 1500ms ease-in;
           animation: appear 1500ms ease-in;
-  -webkit-transition: -webkit-transform 1s 300ms;
-  transition: -webkit-transform 1s 300ms;
-  transition: transform 1s 300ms;
-  transition: transform 1s 300ms, -webkit-transform 1s 300ms;
-  -webkit-transform: translatey(-40%);
-          transform: translatey(-40%);
+  -webkit-transition: -webkit-transform 1s 0.4s;
+  transition: -webkit-transform 1s 0.4s;
+  transition: transform 1s 0.4s;
+  transition: transform 1s 0.4s, -webkit-transform 1s 0.4s;
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
 }
 
 .case:nth-child(i) {
