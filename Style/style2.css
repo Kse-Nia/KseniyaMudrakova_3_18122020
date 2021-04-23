@@ -507,7 +507,7 @@ body {
 }
 
 .case__description {
-  width: 75%;
+  width: 80%;
   height: auto;
   margin: auto 0 auto 5%;
   text-overflow: ellipsis;
@@ -519,9 +519,9 @@ body {
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 3%;
-  /* text-overflow: ellipsis;
-    overflow: hidden;
-    */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .case__info {
@@ -529,9 +529,9 @@ body {
   font-weight: lighter;
   font-size: 0.9em;
   color: grey;
-  /* text-overflow: ellipsis;
-    overflow: hidden;
-    */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .case__prix {
@@ -582,8 +582,8 @@ body {
 }
 
 .case:hover .case__prix {
-  -webkit-transform: translatex(-80%);
-          transform: translatex(-80%);
+  -webkit-transform: translatex(-115%);
+          transform: translatex(-115%);
 }
 
 .case:hover .icon {
@@ -671,8 +671,8 @@ body {
 
 .blocFooter__logo {
   padding: 5% 0 5%;
-  font-size: 1.2em;
   font-family: "Shrikhand", cursive;
+  font-size: 1.2em;
 }
 
 .list {

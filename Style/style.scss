@@ -84,8 +84,8 @@ main {
   width: 100%;
   height: 50px;
   background-color: #eaeaea;
-  font-size: 1.2em;
   font-weight: 800;
+  @include font;
   @include centrer;
 
   &__localicon {
@@ -134,14 +134,13 @@ main {
     width: 30%;
     height: 20%;
     margin: 5% 0 1%;
-    font-size: 1.2em;
+    @include font;
   }
 
   @media (min-width: 1500px) {
     width: 20%;
     height: 55px;
     margin: 5% 0 1%;
-    font-size: 1.2em;
   }
 }
 
@@ -396,7 +395,7 @@ main {
     padding: 5% 0 5%;
     margin: 0;
     font-family: "Shrikhand", cursive;
-    font-size: 1.2em;
+    @include font;
 
     @media (min-width:1000px) {
       font-size: 1.9em;

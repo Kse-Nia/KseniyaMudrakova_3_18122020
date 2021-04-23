@@ -42,7 +42,7 @@ body {
   }
 
   &__retour {
-    font-size: 1.2em;
+    @include font;
   }
 }
 
@@ -195,7 +195,7 @@ body {
   }
 
   &__description {
-    width: 75%;
+    width: 80%;
     height: auto;
     margin: auto 0 auto 5%;
     text-overflow: ellipsis;
@@ -207,9 +207,9 @@ body {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 3%;
-   /* text-overflow: ellipsis;
+    text-overflow: ellipsis;
     overflow: hidden;
-    */
+    white-space: nowrap;
   }
 
   &__info {
@@ -217,9 +217,9 @@ body {
     font-weight: lighter;
     font-size: 0.9em;
     color: grey;
-   /* text-overflow: ellipsis;
+    text-overflow: ellipsis;
     overflow: hidden;
-    */
+    white-space: nowrap;
   }
 
   &__prix {
@@ -245,7 +245,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: transform 300ms ease-in ;
+    transition: transform 300ms ease-in;
   }
 
   &:hover &__check {
@@ -253,18 +253,18 @@ body {
   }
 
   &:hover &__prix {
-    transform: translatex(-80%);
+    transform: translatex(-115%);
   }
 
   &:hover .icon {
-   animation: roll-in 300ms forwards 100ms;
+    animation: roll-in 300ms forwards 100ms;
   }
 }
 
 .icon {
   font-size: 1em;
   color: #ffffff;
-  animation: roll-back 300ms forwards ;
+  animation: roll-back 300ms forwards;
 }
 
 .wrapbtn {
@@ -281,7 +281,7 @@ body {
     border: none;
     color: #ffffff;
     font-family: "Roboto";
-    font-size: 1.2em;
+    @include font;
     text-decoration: none;
     position: relative;
     z-index: 1;
@@ -316,8 +316,8 @@ body {
 
   &__logo {
     padding: 5% 0 5%;
-    font-size: 1.2em;
     font-family: "Shrikhand", cursive;
+    @include font;
   }
 }
 
