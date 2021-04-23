@@ -179,12 +179,23 @@ body {
   position: relative;
   overflow: hidden;
   animation: appear 1500ms ease-in;
-  transition: transform 1s 0.4s;
+  transition: transform 1s .4s linear;
+  transform-origin: top;
   transform: translatey(-50%);
 
-  @for $i from 1 through 10 {
+  @for $i from 1 through 3 {
     &:nth-child(#{i}) {
-      animation-delay: $i * 250ms;
+      animation-delay: $i * 100ms;
+    }
+  }
+  @for $i from 4 through 6 {
+    &:nth-child(#{i}) {
+      animation-delay: $i * 200ms;
+    }
+  }
+  @for $i from 7 through 10 {
+    &:nth-child(#{i}) {
+      animation-delay: $i * 300ms;
     }
   }
 
@@ -198,8 +209,8 @@ body {
     width: 80%;
     height: auto;
     margin: auto 0 auto 5%;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
   }
 
@@ -207,8 +218,8 @@ body {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 3%;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
   }
 
@@ -217,8 +228,8 @@ body {
     font-weight: lighter;
     font-size: 0.9em;
     color: grey;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
   }
 

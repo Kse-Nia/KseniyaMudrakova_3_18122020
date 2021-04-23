@@ -441,27 +441,34 @@ body {
   overflow: hidden;
   -webkit-animation: appear 1500ms ease-in;
           animation: appear 1500ms ease-in;
-  -webkit-transition: -webkit-transform 1s 0.4s;
-  transition: -webkit-transform 1s 0.4s;
-  transition: transform 1s 0.4s;
-  transition: transform 1s 0.4s, -webkit-transform 1s 0.4s;
+  -webkit-transition: -webkit-transform 1s .4s linear;
+  transition: -webkit-transform 1s .4s linear;
+  transition: transform 1s .4s linear;
+  transition: transform 1s .4s linear, -webkit-transform 1s .4s linear;
+  -webkit-transform-origin: top;
+          transform-origin: top;
   -webkit-transform: translatey(-50%);
           transform: translatey(-50%);
 }
 
 .case:nth-child(i) {
-  -webkit-animation-delay: 250ms;
-          animation-delay: 250ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
 }
 
 .case:nth-child(i) {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 
 .case:nth-child(i) {
-  -webkit-animation-delay: 750ms;
-          animation-delay: 750ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.case:nth-child(i) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
 }
 
 .case:nth-child(i) {
@@ -470,33 +477,28 @@ body {
 }
 
 .case:nth-child(i) {
-  -webkit-animation-delay: 1250ms;
-          animation-delay: 1250ms;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
 }
 
 .case:nth-child(i) {
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
+  -webkit-animation-delay: 2100ms;
+          animation-delay: 2100ms;
 }
 
 .case:nth-child(i) {
-  -webkit-animation-delay: 1750ms;
-          animation-delay: 1750ms;
+  -webkit-animation-delay: 2400ms;
+          animation-delay: 2400ms;
 }
 
 .case:nth-child(i) {
-  -webkit-animation-delay: 2000ms;
-          animation-delay: 2000ms;
+  -webkit-animation-delay: 2700ms;
+          animation-delay: 2700ms;
 }
 
 .case:nth-child(i) {
-  -webkit-animation-delay: 2250ms;
-          animation-delay: 2250ms;
-}
-
-.case:nth-child(i) {
-  -webkit-animation-delay: 2500ms;
-          animation-delay: 2500ms;
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
 }
 
 @media (min-width: 1000px) {
@@ -510,8 +512,8 @@ body {
   width: 80%;
   height: auto;
   margin: auto 0 auto 5%;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -519,8 +521,8 @@ body {
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 3%;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -529,8 +531,8 @@ body {
   font-weight: lighter;
   font-size: 0.9em;
   color: grey;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
