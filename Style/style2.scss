@@ -181,7 +181,7 @@ body {
   animation: appear 1500ms ease-in;
   transition: transform 1s .4s linear;
   transform-origin: top;
-  transform: translatey(-50%);
+  transform: translatey(-40%);
 
   @for $i from 1 through 3 {
     &:nth-child(#{i}) {
@@ -202,11 +202,10 @@ body {
   @media (min-width: 1000px) {
     width: 30%;
     height: 120px;
-    //margin: 1% 0 0;
   }
 
   &__description {
-    width: 80%;
+    display: table;
     height: auto;
     margin: auto 0 auto 5%;
     overflow: hidden;
@@ -237,10 +236,11 @@ body {
     width: 15%;
     height: auto;
     padding-bottom: 5%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     font-size: 0.9;
     font-weight: bold;
-    display: flex;
-    align-items: flex-end;
     transition: transform 300ms ease-in;
   }
 

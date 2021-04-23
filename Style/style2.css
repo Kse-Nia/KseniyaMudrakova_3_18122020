@@ -447,8 +447,8 @@ body {
   transition: transform 1s .4s linear, -webkit-transform 1s .4s linear;
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
+  -webkit-transform: translatey(-40%);
+          transform: translatey(-40%);
 }
 
 .case:nth-child(i) {
@@ -509,7 +509,7 @@ body {
 }
 
 .case__description {
-  width: 80%;
+  display: table;
   height: auto;
   margin: auto 0 auto 5%;
   overflow: hidden;
@@ -540,14 +540,11 @@ body {
   width: 15%;
   height: auto;
   padding-bottom: 5%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   font-size: 0.9;
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   -webkit-transition: -webkit-transform 300ms ease-in;
   transition: -webkit-transform 300ms ease-in;
   transition: transform 300ms ease-in;
