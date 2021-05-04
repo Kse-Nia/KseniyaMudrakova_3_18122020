@@ -439,8 +439,8 @@ body {
           flex-direction: row;
   position: relative;
   overflow: hidden;
-  -webkit-animation: appear 1500ms ease-in;
-          animation: appear 1500ms ease-in;
+  -webkit-animation: appear 360ms ease-in;
+          animation: appear 360ms ease-in;
   -webkit-transition: -webkit-transform 1s .4s linear;
   transition: -webkit-transform 1s .4s linear;
   transition: transform 1s .4s linear;

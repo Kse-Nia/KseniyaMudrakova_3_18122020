@@ -757,8 +757,8 @@ main {
   color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background-image: linear-gradient(#9356dc, #ff79da);
-  -webkit-animation: gradient .7s ease infinite;
-          animation: gradient .7s ease infinite;
+  -webkit-animation: gradient .7s ease-in-out infinite;
+          animation: gradient .7s ease-in-out infinite;
   -webkit-transform-origin: top;
           transform-origin: top;
 }
