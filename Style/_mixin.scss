@@ -26,7 +26,6 @@
   box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.2);
 }
 
-
 @mixin hoverbtn{
   content: "";
   position: absolute;
@@ -34,7 +33,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to bottom, lighten($secondaire, 10%) 20%, lighten($primaire, 10%) 100%);
+  background: linear-gradient(to bottom, lighten($secondaire, 5%) 20%, lighten($primaire, 5%) 100%);
   border-radius: 25px;
   opacity: 0;
   z-index: -1;

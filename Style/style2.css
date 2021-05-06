@@ -649,8 +649,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fface8), to(#ae80e5));
-  background: linear-gradient(to bottom, #fface8 20%, #ae80e5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #ff93e1), to(#a16be0));
+  background: linear-gradient(to bottom, #ff93e1 20%, #a16be0 100%);
   border-radius: 25px;
   opacity: 0;
   z-index: -1;
