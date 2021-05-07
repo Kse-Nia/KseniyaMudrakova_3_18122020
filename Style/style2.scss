@@ -179,8 +179,8 @@ body {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  -webkit-animation: appear 1s ease-in;
-          animation: appear 1s ease-in;
+  -webkit-animation: appear .36s ease-in;
+          animation: appear .36s ease-in;
   transform-origin: top;
   -webkit-animation: translate .360s ease-in-out;
           animation: translate .360s ease-in-out;
@@ -219,10 +219,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto 0 auto 5%;
-    /*overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; */
-
   }
 
   &__nom {

@@ -459,8 +459,8 @@ body {
           flex-direction: column;
   position: relative;
   overflow: hidden;
-  -webkit-animation: appear 1s ease-in;
-  animation: appear 1s ease-in;
+  -webkit-animation: appear .36s ease-in;
+  animation: appear .36s ease-in;
   -webkit-transform-origin: top;
           transform-origin: top;
   -webkit-animation: translate .360s ease-in-out;
@@ -537,9 +537,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto 0 auto 5%;
-  /*overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; */
 }
 
 .case__nom {
