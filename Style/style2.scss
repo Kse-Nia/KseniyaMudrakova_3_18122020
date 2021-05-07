@@ -180,8 +180,8 @@ body {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  -webkit-animation: appear 1s ease-in, translate .360s ease-in-out ;
-          animation: appear 1s ease-in, translate .360s ease-in-out ;
+  -webkit-animation: appear .7s ease-in, translate .360s ease-in-out;
+  animation: appear .7s ease-in, translate .360s ease-in-out;
   transform-origin: top;
 
   @for $i from 1 through 3 {
@@ -239,7 +239,6 @@ body {
     font-weight: lighter;
     font-size: 0.9em;
     display: inline-block;
-    color: grey;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
