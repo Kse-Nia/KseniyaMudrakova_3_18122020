@@ -180,11 +180,9 @@ body {
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  -webkit-animation: appear 1s ease-in;
-  animation: appear 1s ease-in;
+  -webkit-animation: appear 1s ease-in, translate .360s ease-in-out ;
+          animation: appear 1s ease-in, translate .360s ease-in-out ;
   transform-origin: top;
-  -webkit-animation: translate .360s ease-in-out;
-  animation: translate .360s ease-in-out;
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {

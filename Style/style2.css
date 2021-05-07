@@ -465,12 +465,10 @@ body {
           flex-direction: column;
   position: relative;
   overflow: hidden;
-  -webkit-animation: appear 1s ease-in;
-  animation: appear 1s ease-in;
+  -webkit-animation: appear 1s ease-in, translate .360s ease-in-out;
+  animation: appear 1s ease-in, translate .360s ease-in-out;
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation: translate .360s ease-in-out;
-  animation: translate .360s ease-in-out;
 }
 
 .case:nth-child(1) {
