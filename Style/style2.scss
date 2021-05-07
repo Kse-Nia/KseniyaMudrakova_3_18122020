@@ -187,23 +187,23 @@ body {
   animation: translate .360s ease-in-out;
 
   @for $i from 1 through 3 {
-    &:nth-child(#{i}) {
-      -webkit-animation-delay: $i * 100ms;
-      animation-delay: $i * 100ms;
+    &:nth-child(#{$i}) {
+      -webkit-animation-delay: $i * 150ms;
+      animation-delay: $i * 150ms;
     }
   }
 
   @for $i from 4 through 6 {
     &:nth-child(#{i}) {
-      -webkit-animation-delay: $i * 200ms;
-      animation-delay: $i * 200ms;
+      -webkit-animation-delay: $i * 300ms;
+      animation-delay: $i * 300ms;
     }
   }
 
   @for $i from 7 through 10 {
     &:nth-child(#{i}) {
-      -webkit-animation-delay: $i * 300ms;
-      animation-delay: $i * 300ms;
+      -webkit-animation-delay: $i * 450ms;
+      animation-delay: $i * 450ms;
     }
   }
 
