@@ -375,7 +375,7 @@ main {
       -webkit-background-clip: text;
       color: transparent;
       background-image: linear-gradient($primaire, $secondaire);
-      animation: gradient .7s ease-in-out infinite;
+      animation: gradient 1s ease-in-out;
       transform-origin: top;
     }
   }

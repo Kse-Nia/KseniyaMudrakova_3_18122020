@@ -214,6 +214,28 @@
   }
 }
 
+@-webkit-keyframes translate {
+  0% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes translate {
+  0% {
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -274,7 +296,7 @@ body {
   width: 100%;
   height: 40vh;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
   z-index: 1;
 }
@@ -354,7 +376,7 @@ body {
 .container {
   width: 100%;
   height: auto;
-  padding: 10% 0 2%;
+  padding: 0 0 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,8 +400,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding: 2% 0 2%;
   }
 }
@@ -416,8 +436,8 @@ body {
   color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
   background-image: linear-gradient(#9356dc, #ff79da);
-  -webkit-animation: gradient .7s ease infinite;
-          animation: gradient .7s ease infinite;
+  -webkit-animation: gradient .3s ease-in;
+  animation: gradient .3s ease-in;
   -webkit-transform-origin: top;
           transform-origin: top;
 }
@@ -425,7 +445,7 @@ body {
 .case {
   width: 100%;
   height: 95px;
-  margin: 5% 0 0;
+  margin: 0 0 4%;
   background-color: white;
   border-radius: 20px;
   -webkit-box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.2);
@@ -433,107 +453,118 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   overflow: hidden;
-  -webkit-animation: appear 360ms ease-in;
-          animation: appear 360ms ease-in;
-  -webkit-transition: -webkit-transform 1s .4s linear;
-  transition: -webkit-transform 1s .4s linear;
-  transition: transform 1s .4s linear;
-  transition: transform 1s .4s linear, -webkit-transform 1s .4s linear;
+  -webkit-animation: appear 1s ease-in;
+  animation: appear 1s ease-in;
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-transform: translatey(-40%);
-          transform: translatey(-40%);
+  -webkit-animation: translate .360s ease-in-out;
+  animation: translate .360s ease-in-out;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+  animation-delay: 100ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
+  animation-delay: 200ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  animation-delay: 300ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
+  animation-delay: 800ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+  animation-delay: 1000ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
+  animation-delay: 1200ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 2100ms;
-          animation-delay: 2100ms;
+  animation-delay: 2100ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 2400ms;
-          animation-delay: 2400ms;
+  animation-delay: 2400ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 2700ms;
-          animation-delay: 2700ms;
+  animation-delay: 2700ms;
 }
 
 .case:nth-child(i) {
   -webkit-animation-delay: 3000ms;
-          animation-delay: 3000ms;
+  animation-delay: 3000ms;
 }
 
 @media (min-width: 1000px) {
   .case {
     width: 30%;
-    height: 120px;
+    height: 110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 .case__description {
-  display: table;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: auto 0 auto 5%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  /*overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
 }
 
 .case__nom {
+  width: calc(80%);
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 3%;
+  display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .case__info {
+  width: calc(80%);
   font-family: Roboto, sans-serif;
   font-weight: lighter;
   font-size: 0.9em;
+  display: inline-block;
   color: grey;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .case__prix {
@@ -587,14 +618,14 @@ body {
 
 .case:hover .icon {
   -webkit-animation: roll-in 300ms forwards 100ms;
-          animation: roll-in 300ms forwards 100ms;
+  animation: roll-in 300ms forwards 100ms;
 }
 
 .icon {
   font-size: 1em;
   color: #ffffff;
   -webkit-animation: roll-back 300ms forwards;
-          animation: roll-back 300ms forwards;
+  animation: roll-back 300ms forwards;
 }
 
 .wrapbtn {

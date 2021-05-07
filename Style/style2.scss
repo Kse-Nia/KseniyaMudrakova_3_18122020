@@ -54,7 +54,8 @@ body {
   &__image {
     width: 100%;
     height: 40vh;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: relative;
     z-index: 1;
 
@@ -114,9 +115,8 @@ body {
 
 .container {
   width: 100%;
-  //height: 50%;
   height: auto;
-  padding: 10% 0 2%;
+  padding: 0 0 2%;
   @include column;
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
@@ -125,7 +125,7 @@ body {
   @media (min-width: 1000px) {
     height: 50%;
     flex-direction: row;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     padding: 2% 0 2%;
   }
 
@@ -161,7 +161,8 @@ body {
       -webkit-background-clip: text;
       color: transparent;
       background-image: linear-gradient($primaire, $secondaire);
-      animation: gradient .7s ease infinite;
+      -webkit-animation: gradient .3s ease-in;
+              animation: gradient .3s ease-in;
       transform-origin: top;
     }
   }
@@ -170,66 +171,83 @@ body {
 .case {
   width: 100%;
   height: 95px;
-  margin: 5% 0 0;
+  margin: 0 0 4%;
   background-color: white;
   border-radius: 20px;
   @include shadow;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
-  animation: appear 360ms ease-in;
-  transition: transform 1s .4s linear;
+  -webkit-animation: appear 1s ease-in;
+          animation: appear 1s ease-in;
   transform-origin: top;
-  transform: translatey(-40%);
+  -webkit-animation: translate .360s ease-in-out;
+          animation: translate .360s ease-in-out;
 
   @for $i from 1 through 3 {
     &:nth-child(#{i}) {
-      animation-delay: $i * 100ms;
+      -webkit-animation-delay: $i * 100ms;
+              animation-delay: $i * 100ms;
     }
   }
+
   @for $i from 4 through 6 {
     &:nth-child(#{i}) {
-      animation-delay: $i * 200ms;
+      -webkit-animation-delay: $i * 200ms;
+              animation-delay: $i * 200ms;
     }
   }
+
   @for $i from 7 through 10 {
     &:nth-child(#{i}) {
-      animation-delay: $i * 300ms;
+      -webkit-animation-delay: $i * 300ms;
+              animation-delay: $i * 300ms;
     }
   }
+
 
   @media (min-width: 1000px) {
     width: 30%;
-    height: 120px;
+    height: 110px;
+    display: flex;
   }
 
   &__description {
-    display: table;
+    //min-width: 100px;
     height: auto;
+    display: flex;
+    flex-direction: column;
     margin: auto 0 auto 5%;
-    overflow: hidden;
+    /*overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: nowrap; */
+
   }
 
   &__nom {
+    width: calc(80%);
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 3%;
-    overflow: hidden;
+    display: inline-block;
+    overflow:hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   &__info {
+    width: calc(80%);
     font-family: Roboto, sans-serif;
     font-weight: lighter;
     font-size: 0.9em;
+    display: inline-block;
     color: grey;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   &__prix {
@@ -268,14 +286,16 @@ body {
   }
 
   &:hover .icon {
-    animation: roll-in 300ms forwards 100ms;
+    -webkit-animation: roll-in 300ms forwards 100ms;
+            animation: roll-in 300ms forwards 100ms;
   }
 }
 
 .icon {
   font-size: 1em;
   color: #ffffff;
-  animation: roll-back 300ms forwards;
+  -webkit-animation: roll-back 300ms forwards;
+          animation: roll-back 300ms forwards;
 }
 
 .wrapbtn {
