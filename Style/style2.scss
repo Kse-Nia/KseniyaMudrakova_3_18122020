@@ -118,14 +118,15 @@ body {
   height: auto;
   padding: 0 0 2%;
   @include column;
+  display: flex;
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
 
-
   @media (min-width: 1000px) {
-    height: 50%;
+    height: auto;
+    display: flex;
     flex-direction: row;
-    //flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 2% 0 2%;
   }
 
@@ -206,15 +207,17 @@ body {
     }
   }
 
-
   @media (min-width: 1000px) {
     width: 30%;
     height: 110px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__description {
-    //min-width: 100px;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -222,7 +225,7 @@ body {
   }
 
   &__nom {
-    width: calc(80%);
+    width: calc(85%);
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 3%;
