@@ -23,7 +23,7 @@
 }
 
 @mixin shadow {
-  box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @mixin hoverbtn{

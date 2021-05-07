@@ -128,6 +128,7 @@ main {
 
   &:after {
     @include hoverbtn;
+    @include shadow;
   }
 
   @media (min-width: 1000px) {
