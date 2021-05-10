@@ -578,10 +578,11 @@ body {
 .case__prix {
   width: 15%;
   height: auto;
+  padding-bottom: 5%;
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 0.9;
+  font-size: 1em;
   font-weight: bold;
   -webkit-transition: -webkit-transform 300ms ease-in;
   transition: -webkit-transform 300ms ease-in;

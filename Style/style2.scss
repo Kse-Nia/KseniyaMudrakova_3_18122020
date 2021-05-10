@@ -247,11 +247,11 @@ body {
   &__prix {
     width: 15%;
     height: auto;
-    //padding-bottom: 5%;
+    padding-bottom: 5%;
     position: absolute;
     bottom: 0;
     right: 0;
-    font-size: 0.9;
+    font-size: 1em;
     font-weight: bold;
     transition: transform 300ms ease-in;
   }
