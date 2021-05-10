@@ -427,7 +427,6 @@ body {
 }
 
 .favoris__plein {
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   position: absolute;
@@ -437,7 +436,6 @@ body {
 }
 
 .favoris__plein:hover {
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));

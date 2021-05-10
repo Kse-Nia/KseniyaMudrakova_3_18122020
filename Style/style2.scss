@@ -137,7 +137,6 @@ body {
   margin: 2%;
   font-size: 1.8em;
   position: relative;
-  //display: block;
 
   &__vide {
     position: absolute;
@@ -149,7 +148,6 @@ body {
   }
 
   &__plein {
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     position: absolute;
@@ -158,7 +156,6 @@ body {
     z-index: 2;
 
     &:hover {
-      background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       background-image: linear-gradient($primaire, $secondaire);
