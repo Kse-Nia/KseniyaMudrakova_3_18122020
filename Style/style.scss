@@ -351,7 +351,6 @@ main {
   margin: 2%;
   font-size: 1.8em;
   position: relative;
-  //display: block;
 
   &__vide {
     position: absolute;
@@ -363,16 +362,16 @@ main {
   }
 
   &__plein {
-    background-clip: text;
+   // background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    color:: transparent;
     position: absolute;
     left: 0;
     top: 0;
     z-index: 2;
 
     &:hover {
-      background-clip: text;
+     // background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       background-image: linear-gradient($primaire, $secondaire);

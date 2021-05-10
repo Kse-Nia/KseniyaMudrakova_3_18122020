@@ -215,7 +215,8 @@ body {
   }
 
   &__description {
-    width: 100%;
+    //width: 100%;
+    width: calc(85%);
     height: auto;
     display: flex;
     flex-direction: column;
@@ -249,7 +250,7 @@ body {
   &__prix {
     width: 15%;
     height: auto;
-    padding-bottom: 5%;
+    //padding-bottom: 5%;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -282,16 +283,16 @@ body {
   }
 
   &:hover .icon {
-    -webkit-animation: roll-in 300ms forwards 100ms;
-    animation: roll-in 300ms forwards 100ms;
+    -webkit-animation: roll-in 360ms forwards 100ms;
+    animation: roll-in 360ms forwards 100ms;
   }
 }
 
 .icon {
   font-size: 1em;
   color: #ffffff;
-  -webkit-animation: roll-back 300ms forwards;
-  animation: roll-back 300ms forwards;
+  -webkit-animation: roll-back 360ms forwards;
+  animation: roll-back 360ms forwards;
 }
 
 .wrapbtn {
