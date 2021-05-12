@@ -272,8 +272,8 @@ main {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10000;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ff79da), to(#9356dc));
-  background: linear-gradient(to bottom, #ff79da 10%, #9356dc 100%);
+  background: #d2b3f1;
+  background: linear-gradient(171deg, rgba(210, 179, 241, 0.896796) 0%, rgba(244, 185, 227, 0.947216) 100%);
   -webkit-animation: loader 1200ms ease-in;
           animation: loader 1200ms ease-in;
   -webkit-animation-delay: 1200ms;
