@@ -539,7 +539,7 @@ body {
 }
 
 .case__description {
-  width: calc(85%);
+  width: 90%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,36 +549,37 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto 0 auto 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .case__nom {
-  width: calc(85%);
+  display: block;
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 3%;
   display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .case__info {
-  width: calc(80%);
+  width: calc(85%);
   font-family: Roboto, sans-serif;
   font-weight: lighter;
   font-size: 0.9em;
   display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
 }
 
 .case__prix {
   width: 15%;
   height: auto;
-  padding-bottom: 5%;
+  padding: 70% 2% 5%;
   position: absolute;
   bottom: 0;
   right: 0;

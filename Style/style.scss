@@ -27,8 +27,7 @@ main {
   height: 100%;
   @include centrer;
   z-index: 10000;
-  background: rgb(210,179,241);
-  background: linear-gradient(171deg, rgba(210,179,241,0.896796218487395) 0%, rgba(244,185,227,0.9472163865546218) 100%);
+  background: linear-gradient(171deg, rgba(240, 227, 255, 0.897) 0%, rgba(255, 244, 252, 0.947) 100%);
   animation: loader 1200ms ease-in;
   animation-delay: 1200ms;
   animation-fill-mode: both;
