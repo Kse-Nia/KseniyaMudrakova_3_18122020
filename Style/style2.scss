@@ -182,135 +182,131 @@ body {
   animation-fill-mode: both;
   transform-origin: top;
 
-  /* &:hover + &__description {
+  &:hover  &__description {
     width: 60%;
     animation-fill-mode: both;
-  } */ 
-
-  @for $i from 1 through 3 {
-    &:nth-child(#{$i}) {
-      -webkit-animation-delay: $i * 150ms;
-      animation-delay: $i * 150ms;
-    }
   }
 
-  @for $i from 4 through 6 {
-    &:nth-child(#{i}) {
-      -webkit-animation-delay: $i * 300ms;
-      animation-delay: $i * 300ms;
-    }
+@for $i from 1 through 3 {
+  &:nth-child(#{$i}) {
+    -webkit-animation-delay: $i * 150ms;
+    animation-delay: $i * 150ms;
   }
+}
 
-  @for $i from 7 through 10 {
-    &:nth-child(#{i}) {
-      -webkit-animation-delay: $i * 450ms;
-      animation-delay: $i * 450ms;
-    }
+@for $i from 4 through 6 {
+  &:nth-child(#{i}) {
+    -webkit-animation-delay: $i * 300ms;
+    animation-delay: $i * 300ms;
   }
+}
 
-  @media (min-width: 1000px) {
-    width: 30%;
-    height: 110px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@for $i from 7 through 10 {
+  &:nth-child(#{i}) {
+    -webkit-animation-delay: $i * 450ms;
+    animation-delay: $i * 450ms;
   }
+}
 
+@media (min-width: 1000px) {
+  width: 30%;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+&__description {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 auto 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+&__nom {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 3%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+&__info {
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+  font-size: 0.9em;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+&__prix {
+  width: 15%;
+  height: auto;
+  padding: 70% 0 5%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1em;
+  font-weight: bold;
+  transition: transform 300ms ease-in;
+}
+
+&__check {
+  background-color: $tertiaire;
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  right: -25%;
+  font-size: 1.4em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 300ms ease-in;
+}
+
+&:hover &__check {
+  transform: translatex(-90%);
+}
+
+&:hover &__prix {
+  transform: translatex(-115%);
+}
+
+&:hover .icon {
+  -webkit-animation: roll-in 360ms forwards 100ms;
+  animation: roll-in 360ms forwards 100ms;
+}
+
+&:hover,
+&:focus,
+&:active {
   &__description {
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    margin: auto 0 auto 5%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-
-   &:hover {
-      width: 60%;
-      animation-fill-mode: both;
-    } 
+    width: 70%;
   }
 
   &__nom {
-    width: 100%;
-    font-weight: bold;
-    font-size: 1.1em;
-    margin-bottom: 3%;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 70%;
   }
 
   &__info {
-    width: 100%;
-    font-family: Roboto, sans-serif;
-    font-weight: lighter;
-    font-size: 0.9em;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 70%;
   }
 
-  &__prix {
-    width: 15%;
-    height: auto;
-    padding: 70% 0 5%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 1em;
-    font-weight: bold;
-    transition: transform 300ms ease-in;
-  }
-
-  &__check {
-    background-color: $tertiaire;
-    width: 25%;
-    height: 100%;
-    position: absolute;
-    right: -25%;
-    font-size: 1.4em;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: transform 300ms ease-in;
-  }
-
-  &:hover &__check {
-    transform: translatex(-90%);
-  }
-
-  &:hover &__prix {
-    transform: translatex(-115%);
-  }
-
-  &:hover .icon {
-    -webkit-animation: roll-in 360ms forwards 100ms;
-    animation: roll-in 360ms forwards 100ms;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    &__description {
-      width: 70%;
-    }
-
-    &__nom {
-      width: 70%;
-    }
-
-    &__info {
-      width: 70%;
-    }
-
-  }
+}
 }
 
 .icon {
