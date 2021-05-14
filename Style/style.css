@@ -272,7 +272,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   z-index: 10000;
-  background: linear-gradient(171deg, rgba(240, 227, 255, 0.897) 0%, rgba(255, 244, 252, 0.947) 100%);
+  background: linear-gradient(171deg, rgba(240, 227, 255, 0.897) 0%, rgba(253, 253, 253, 0.947) 100%);
   -webkit-animation: loader 1200ms ease-in;
           animation: loader 1200ms ease-in;
   -webkit-animation-delay: 1200ms;
@@ -307,6 +307,8 @@ main {
   margin: 0 3% 0;
   -webkit-animation: zoomin 900ms 2 linear;
           animation: zoomin 900ms 2 linear;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .ico__1 {

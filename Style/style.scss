@@ -27,7 +27,7 @@ main {
   height: 100%;
   @include centrer;
   z-index: 10000;
-  background: linear-gradient(171deg, rgba(240, 227, 255, 0.897) 0%, rgba(255, 244, 252, 0.947) 100%);
+  background: linear-gradient(171deg, rgba(240, 227, 255, 0.897) 0%, rgba(253, 253, 253, 0.947) 100%);
   animation: loader 1200ms ease-in;
   animation-delay: 1200ms;
   animation-fill-mode: both;
@@ -45,6 +45,7 @@ main {
   height: 40%;
   margin: 0 3% 0;
   animation: zoomin 900ms 2 linear;
+  animation-fill-mode: backwards;
 
   &__1 {
     animation-delay: 100ms;
