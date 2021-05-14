@@ -217,14 +217,13 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto 0 auto 5%;
-    overflow: hidden;
+   /*  overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: nowrap; */ 
   }
 
   &__nom {
-    //width: calc(85%);
-    display: block;
+    width: calc(85%);
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 3%;
@@ -283,6 +282,18 @@ body {
   &:hover .icon {
     -webkit-animation: roll-in 360ms forwards 100ms;
     animation: roll-in 360ms forwards 100ms;
+  }
+  &:hover, &:focus, &:active{
+    &__description{
+      width: 70%;
+    }
+    &__nom{
+      width: 70%;
+    }
+    &__info{
+      width: 70%;
+    }
+
   }
 }
 

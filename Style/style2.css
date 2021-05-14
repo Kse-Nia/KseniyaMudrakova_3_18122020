@@ -549,13 +549,13 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto 0 auto 5%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  /*  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
 }
 
 .case__nom {
-  display: block;
+  width: calc(85%);
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 3%;
@@ -628,6 +628,18 @@ body {
 .case:hover .icon {
   -webkit-animation: roll-in 360ms forwards 100ms;
   animation: roll-in 360ms forwards 100ms;
+}
+
+.case:hover__description, .case:focus__description, .case:active__description {
+  width: 70%;
+}
+
+.case:hover__nom, .case:focus__nom, .case:active__nom {
+  width: 70%;
+}
+
+.case:hover__info, .case:focus__info, .case:active__info {
+  width: 70%;
 }
 
 .icon {
